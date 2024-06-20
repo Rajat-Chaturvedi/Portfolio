@@ -1,0 +1,44 @@
+@import '../../styles/globalVariables';
+
+.mainContainer{
+    background: #F3F6FA;
+    padding: 12px;
+
+    h2 {
+        text-align: center;
+        font-size: 36px;
+        color: #1D252D;
+        // line-height: 24px;
+        font-weight: 700;
+        text-transform: capitalize;
+
+        @include for-size(phone-only) {
+            font-size: 24px;
+        }
+    }
+   
+}
+
+.contentContainer{
+    padding: 12px;
+}
+
+.Wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 32px;
+
+    @include for-size(phone-only) {
+        grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+        gap: 24px;
+    }
+
+    @include for-size(phone-lg) {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        gap: 20px;
+    }
+
+    // @include for-size(phone-sm) {
+    //     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    // }
+}

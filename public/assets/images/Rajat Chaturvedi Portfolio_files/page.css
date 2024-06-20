@@ -1,0 +1,690 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/Content/content.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Variables */
+/* Color Variables */
+/* Font-size */
+/* Font-weight */
+.content_section1__UMSKs {
+  background-color: #f7f7f7;
+  padding: 24px;
+  z-index: 0;
+}
+@media only screen and (max-width: 767.98px) {
+  .content_section1__UMSKs {
+    padding: 16px;
+  }
+}
+
+.content_leftPannel__IAtc6 {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #e1e4e8;
+}
+@media only screen and (max-width: 767.98px) {
+  .content_leftPannel__IAtc6 {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.content_leftContentWrapper__UIeM_ {
+  width: 100%;
+}
+.content_leftContentWrapper__UIeM_ div {
+  padding: 16px;
+}
+@media only screen and (max-width: 767.98px) {
+  .content_leftContentWrapper__UIeM_ div {
+    padding: 12px;
+  }
+}
+.content_leftContentWrapper__UIeM_ h1 {
+  color: #191919;
+  font-size: 18px !important;
+  font-weight: 500;
+  margin-block: 0 !important;
+  padding-bottom: 16px;
+}
+.content_leftContentWrapper__UIeM_ p {
+  color: #485661;
+  font-size: 14px !important;
+  font-weight: 500;
+  text-align: justify;
+  padding-bottom: 8px;
+  margin-block: 0 !important;
+}
+
+.content_buttonWrapper__gVKrb {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  padding: 0px !important;
+}
+.content_buttonWrapper__gVKrb button {
+  height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  width: auto;
+  min-width: 152px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 375.98px) {
+  .content_buttonWrapper__gVKrb button {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .content_buttonWrapper__gVKrb button {
+    width: calc((100% - 12px) / 2);
+  }
+}
+@media only screen and (max-width: 375.98px) {
+  .content_buttonWrapper__gVKrb {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .content_buttonWrapper__gVKrb {
+    width: 100%;
+    gap: 8px;
+  }
+}
+
+.content_btnLearn__lhB7k {
+  background-color: #f3f9f6;
+  color: #048848;
+}
+
+.content_btnContact__6Dff1 {
+  background-color: #f9f5fe;
+  color: #6f10a2;
+}
+
+.content_trend__pl0jX {
+  color: #1d252d !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  margin-top: -4px;
+  margin-bottom: 0 !important;
+  padding-bottom: 4px;
+}
+@media only screen and (max-width: 767.98px) {
+  .content_trend__pl0jX {
+    text-align: center;
+    font-size: 15px !important;
+  }
+}
+
+.content_description__H2TFO {
+  color: #566470 !important;
+  font-weight: 400 !important;
+}
+@media only screen and (max-width: 991.98px) {
+  .content_description__H2TFO {
+    font-size: 14px !important;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .content_description__H2TFO {
+    font-size: 14px !important;
+  }
+}
+@media only screen and (max-width: 359.98px) {
+  .content_description__H2TFO {
+    font-size: 13px !important;
+  }
+}
+
+.content_pannelContainer__W7yfq {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+.content_pannelContainer__W7yfq p {
+  margin-block: 0 !important;
+  font-size: 18px;
+  font-weight: 500;
+}
+.content_pannelContainer__W7yfq h1 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-block: 0 !important;
+}
+@media only screen and (max-width: 767.98px) {
+  .content_pannelContainer__W7yfq {
+    flex-direction: column-reverse;
+    gap: 6px;
+  }
+}
+
+.content_righPanel__O7Z2w {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+@media only screen and (max-width: 767.98px) {
+  .content_righPanel__O7Z2w {
+    width: 100%;
+  }
+}
+
+.content_animationContainer__M7FNf {
+  position: relative;
+  /* Ensure it's positioned correctly */
+  width: 100%;
+  /* Adjust as per your layout needs */
+  height: 500px;
+  /* Adjust as per your layout needs */
+  overflow: hidden;
+  /* Hide overflow if necessary */
+}
+.content_animationContainer__M7FNf svg {
+  margin-top: -36px;
+  display: block;
+  /* Ensure SVGs are block elements */
+}
+.content_animationContainer__M7FNf svg:not(:first-child) {
+  display: none;
+  /* Hide all SVGs except the first one */
+}
+@media only screen and (max-width: 767.98px) {
+  .content_animationContainer__M7FNf svg {
+    margin-top: -48px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .content_animationContainer__M7FNf {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .content_animationContainer__M7FNf {
+    height: 100%;
+  }
+}
+
+.content_rightPanelContent__RlRvq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -132px;
+}
+@media only screen and (max-width: 991.98px) {
+  .content_rightPanelContent__RlRvq {
+    margin-top: -124px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .content_rightPanelContent__RlRvq {
+    margin-top: -60px !important;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .content_rightPanelContent__RlRvq {
+    margin-top: -72px;
+  }
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/Header/header.module.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Variables */
+/* Color Variables */
+/* Font-size */
+/* Font-weight */
+.header_headerContainer__sG8xl {
+  padding-top: 8px;
+  z-index: 999;
+  position: relative;
+  background: white;
+}
+
+.header_headerSubContainer__OOCuQ {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 767.98px) {
+  .header_headerSubContainer__OOCuQ {
+    flex-direction: column;
+  }
+}
+
+.header_headerLeftWrapper__5p55R {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  color: #4C4C4C;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header_logo__vMT0l {
+  border-radius: 50%;
+  border: 1px solid transparent;
+  padding: 6px 6px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #6f10a2;
+  cursor: pointer;
+}
+.header_logo__vMT0l:hover {
+  background: #8f15d0;
+}
+
+.header_headerMidWrapper__n_JnS {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-inline: 8px;
+  color: #4C4C4C;
+  font-weight: 500;
+  font-size: 16px;
+}
+.header_headerMidWrapper__n_JnS p {
+  cursor: pointer;
+}
+.header_headerMidWrapper__n_JnS p:hover {
+  color: #6F10A2;
+}
+@media only screen and (max-width: 767.98px) {
+  .header_headerMidWrapper__n_JnS {
+    flex-direction: column;
+    gap: 10px;
+    margin: 16px 0px;
+    justify-content: center;
+    align-items: center;
+  }
+  .header_headerMidWrapper__n_JnS p {
+    margin-block: 0 !important;
+  }
+}
+
+.header_headerRightWrapper__i2dVE {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  color: #4C4C4C;
+  font-weight: 500;
+  font-size: 16px;
+}
+.header_headerRightWrapper__i2dVE button {
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767.98px) {
+  .header_headerRightWrapper__i2dVE {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.header_buttonLinkedIn__AvzJv {
+  background-color: #6F10A2;
+  color: #fff;
+  border: none;
+}
+
+.header_buttonGitHub__ivnEc {
+  background-color: #36434E;
+  color: #fff;
+  border: none;
+}
+
+.header_buttonCV__SCbmt {
+  color: #4C4C4C;
+  background: #fff;
+  font-weight: 500;
+  border: 1px solid #4C4C4C;
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/Experience/experience.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Variables */
+/* Color Variables */
+/* Font-size */
+/* Font-weight */
+.experience_container__rNaVO {
+  background: #F9F5FE;
+  padding: 12px;
+}
+.experience_container__rNaVO h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #1D252D;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 767.98px) {
+  .experience_container__rNaVO h2 {
+    font-size: 24px;
+  }
+}
+
+.experience_cardWrapper__gW_A6 {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+@media only screen and (max-width: 767.98px) {
+  .experience_cardWrapper__gW_A6 {
+    flex-direction: column;
+  }
+}
+
+.experience_cardContainer__U_yTc {
+  background: #fff;
+  border: 1px solid #d2d2d2;
+  border-radius: 8px;
+  box-shadow: 0 14px 20px 0 rgba(25, 25, 25, 0.1);
+  padding: 10px;
+}
+.experience_cardContainer__U_yTc h4 {
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+  padding-top: 8px;
+}
+@media only screen and (max-width: 767.98px) {
+  .experience_cardContainer__U_yTc h4 {
+    font-size: 16px;
+  }
+}
+.experience_cardContainer__U_yTc h5 {
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 8px;
+  color: #4C4C4C;
+}
+@media only screen and (max-width: 767.98px) {
+  .experience_cardContainer__U_yTc h5 {
+    font-size: 14px;
+  }
+}
+.experience_cardContainer__U_yTc ul {
+  margin: 0;
+  padding-top: 8px;
+}
+
+.experience_imgContainer__nJFPj {
+  display: flex;
+  justify-content: center;
+}
+.experience_imgContainer__nJFPj img {
+  border: none;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.experience_imgContainer__nJFPj img:not(:nth-child(2)) {
+  border: 1px solid #d2d2d2;
+}
+@media only screen and (max-width: 767.98px) {
+  .experience_imgContainer__nJFPj img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.experience_bullets__DbpI7 {
+  color: #737373;
+  padding-bottom: 8px;
+}
+@media only screen and (max-width: 767.98px) {
+  .experience_bullets__DbpI7 {
+    font-size: 14px;
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/Skill/skill.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Variables */
+/* Color Variables */
+/* Font-size */
+/* Font-weight */
+.skill_contentContainer__DPl48 {
+  border: 1px solid #d2d2d2;
+  border-radius: 8px;
+  padding: 10px;
+}
+.skill_contentContainer__DPl48 p {
+  font-size: 24px;
+  color: rgb(48, 7, 69);
+  font-weight: 700;
+  margin: 0px 0px 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d2d2d7;
+}
+@media only screen and (max-width: 767.98px) {
+  .skill_contentContainer__DPl48 p {
+    font-size: 18px;
+  }
+}
+.skill_contentContainer__DPl48 h6 {
+  color: #566470;
+  font-size: 16px;
+  margin: 0px;
+  font-weight: 500;
+  padding: 8px 0 0;
+}
+@media only screen and (max-width: 767.98px) {
+  .skill_contentContainer__DPl48 h6 {
+    font-size: 14px;
+  }
+}
+
+.skill_imageWrapper__fKAe7 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+  grid-gap: 10px;
+  gap: 10px;
+}
+@media only screen and (max-width: 767.98px) {
+  .skill_imageWrapper__fKAe7 {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  }
+}
+@media only screen and (max-width: 479.98px) {
+  .skill_imageWrapper__fKAe7 {
+    grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+  }
+}
+
+.skill_itemContainer__jJh9P {
+  text-align: center;
+  /* Example additional styling */
+}
+
+.skill_imgContainer__b4hx6 img {
+  height: 120px;
+  width: 120px;
+}
+@media only screen and (max-width: 767.98px) {
+  .skill_imgContainer__b4hx6 img {
+    height: 80px;
+    width: 80px;
+  }
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/Skills/skills.module.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Variables */
+/* Color Variables */
+/* Font-size */
+/* Font-weight */
+.skills_mainContainer__opJh0 {
+  background: #fff;
+  padding: 12px;
+}
+.skills_mainContainer__opJh0 h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #1D252D;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 767.98px) {
+  .skills_mainContainer__opJh0 h2 {
+    font-size: 24px;
+  }
+}
+
+.skills_subContainer__WXgwb {
+  padding: 12px;
+}
+
+.skills_Wrapper__oUx0K {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/Projects/projects.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Variables */
+/* Color Variables */
+/* Font-size */
+/* Font-weight */
+.projects_mainContainer__t7ZDQ {
+  background: #F3F6FA;
+  padding: 12px;
+}
+.projects_mainContainer__t7ZDQ h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #1D252D;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 767.98px) {
+  .projects_mainContainer__t7ZDQ h2 {
+    font-size: 24px;
+  }
+}
+
+.projects_contentContainer__HNWcN {
+  padding: 12px;
+}
+
+.projects_Wrapper__Y0HKQ {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  grid-gap: 32px;
+  gap: 32px;
+}
+@media only screen and (max-width: 767.98px) {
+  .projects_Wrapper__Y0HKQ {
+    grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+  }
+}
+@media only screen and (max-width: 479.98px) {
+  .projects_Wrapper__Y0HKQ {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/Project/project.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Variables */
+/* Color Variables */
+/* Font-size */
+/* Font-weight */
+.project_contentContainer__iKiCL {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #e1e4e8;
+  padding: 12px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.project_contentContainer__iKiCL:hover {
+  cursor: pointer;
+}
+
+.project_imgContainer__8dqOO {
+  width: 100%;
+  height: auto;
+}
+.project_imgContainer__8dqOO img {
+  width: 100%;
+  height: auto;
+}
+
+.project_title__1g_EA {
+  font-size: 18px;
+  color: #191919;
+  text-align: center;
+  font-weight: 600;
+}
+@media only screen and (max-width: 767.98px) {
+  .project_title__1g_EA {
+    font-size: 16px;
+  }
+}
+
+.project_description__4dFDW {
+  font-weight: 400;
+  font-size: 16px;
+  color: #191919;
+}
+@media only screen and (max-width: 767.98px) {
+  .project_description__4dFDW {
+    font-size: 14px;
+  }
+}
+
+.project_techStack__fPpCj {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.project_techStack__fPpCj span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project_techStackTitle__ydWSC {
+  font-size: 16px;
+  color: #222222;
+  font-weight: 500;
+}
+@media only screen and (max-width: 767.98px) {
+  .project_techStackTitle__ydWSC {
+    font-size: 14px;
+  }
+}
+
+.project_techStackName___zr_X {
+  font-size: 16px;
+  color: #4c4c4c;
+  font-weight: 400;
+}
+@media only screen and (max-width: 767.98px) {
+  .project_techStackName___zr_X {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,109 @@
+@import '../../styles/globalVariables';
+
+.mainContainer {
+    background: linear-gradient(180deg, #f4faff 20%, #fff 25%, #fff);
+    padding: 12px;
+
+    div {
+        padding: 12px;
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1D252D;
+            font-weight: 700;
+            text-transform: capitalize;
+
+            @include for-size(phone-only) {
+                font-size: 24px;
+            }
+        }
+
+        @include for-size(phone-only){
+            padding:8px 12px;
+        }
+    }
+
+}
+
+.formContainer {
+    width: 390px;
+    padding: 0px !important;
+
+    @include for-size(phone-only) {
+        width: auto;
+    }
+}
+
+.contactForm {
+    position: relative;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 8px 24px 0 rgba(48, 40, 137, .08);
+    padding: 24px 32px 32px;
+    min-width: 100%;
+
+    @include for-size(phone-only) {
+        padding: 12px 0px;
+        min-width: unset;
+    
+    }
+}
+
+.inputContainers {
+    display: grid;
+    row-gap: 8px;
+
+    label {
+        color: #191919;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    input {
+        border-radius: 8px;
+        border: 1px solid #d2d2d2 !important;
+        padding: 10px 8px 10px 12px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #191919;
+        background: $primary-bg !important;
+
+        &::placeholder {
+            color: #d2d2d2;
+        }
+    }
+
+    textArea {
+        border-radius: 8px;
+        border: 1px solid #d2d2d2 !important;
+        padding: 10px 8px 10px 12px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #191919;
+        background: $primary-bg !important;
+
+        &::placeholder {
+            color: #d2d2d2;
+        }
+    }
+}
+
+.submitBtn {
+    height: 44px;
+    width: 100%;
+    padding: 0 12px;
+    border-radius: 8px;
+    background: #6f10a2;
+    margin: 8px 0 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+
+    @include for-size(phone-only) {
+        margin: 0;
+    }
+
+}
