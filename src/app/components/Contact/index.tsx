@@ -30,7 +30,7 @@ const Contact = () => {
             className={styles.contactForm}
           >
             <div>
-                <h4>Connect for any query</h4>
+              <h4>Connect for any query</h4>
             </div>
             <div className={styles.inputContainers}>
               <label>Name</label>
