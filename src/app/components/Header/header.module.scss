@@ -1,0 +1,124 @@
+@import '../../styles/globalVariables';
+
+.headerContainer {
+    padding-top: 8px;
+    z-index: 999;
+    position: relative;
+     background:white;
+}
+
+.headerSubContainer {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #e1e4e8;
+    ;
+    border-radius: 10px;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-size(phone-only) {
+        flex-direction: column;
+    }
+}
+
+.headerLeftWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    color: $lightgrey;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logo {
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 6px 6px;
+    color: $primary-bg;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #6f10a2;
+    cursor: pointer;
+
+    &:hover {
+        background: #8f15d0;
+    }
+}
+
+.headerMidWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-inline: 8px;
+    color: $lightgrey;
+    font-weight: 500;
+    font-size: 16px;
+
+    p {
+        cursor: pointer;
+
+        &:hover {
+            color: $violet;
+        }
+    }
+
+    @include for-size(phone-only) {
+        flex-direction: column;
+        gap: 10px;
+        margin: 16px 0px;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin-block: 0 !important;
+        }
+    }
+}
+
+.headerRightWrapper {
+
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    color: $lightgrey;
+    font-weight: 500;
+    font-size: 16px;
+
+button{
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    @include for-size(phone-only) {
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
+
+.buttonLinkedIn {
+    background-color: $violet;
+    color: $primary-bg;
+    border: none;
+}
+
+.buttonGitHub {
+    background-color: $Cool-Grey-700;
+    color: $primary-bg;
+    border: none;
+    
+}
+
+.buttonCV {
+    color: $lightgrey;
+    background: $primary-bg;
+    font-weight: 500;
+    border: 1px solid $lightgrey;
+
+}

@@ -1,0 +1,29 @@
+@import '../../styles/globalVariables';
+
+.mainContainer {
+    background: $primary-bg;
+    padding:12px;
+
+    h2 {
+        text-align: center;
+        font-size: 36px;
+        color: #1D252D;
+        // line-height: 24px;
+        font-weight: 700;
+        text-transform: capitalize;
+
+        @include for-size(phone-only) {
+            font-size: 24px;
+        }
+    }
+}
+
+.subContainer{
+    padding:12px;  
+}
+
+.Wrapper{
+    display: flex;
+    gap:24px;
+    flex-direction: column;
+}

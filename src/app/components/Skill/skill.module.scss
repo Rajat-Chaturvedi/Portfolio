@@ -1,0 +1,70 @@
+@import '../../styles/globalVariables';
+
+.contentContainer {
+    border: 1px solid #d2d2d2;
+    border-radius: 8px;
+    padding: 10px;
+
+    p {
+        font-size: 24px;
+        color: rgb(48, 7, 69);
+        font-weight: 700;
+        margin: 0px 0px 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d2d2d7;
+
+        @include for-size(phone-only) {
+            font-size: 18px;
+        }
+    }
+
+    h6 {
+        color: #566470;
+        font-size: 16px;
+        margin: 0px;
+        font-weight: 500;
+        padding: 8px 0 0;
+
+        @include for-size(phone-only) {
+            font-size: 14px;
+        }
+    }
+}
+
+.imageWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+    gap: 10px;
+
+    @include for-size(phone-only) {
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    }
+
+    @include for-size(phone-lg) {
+        grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+    }
+
+    // @include for-size(phone-sm) {
+    //     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    // }
+}
+
+.itemContainer {
+    text-align: center;
+    /* Example additional styling */
+    //     @include text-ellipse(200px); /* Example usage of text-ellipse mixin */
+}
+
+
+.imgContainer {
+    img {
+        height: 120px;
+        width: 120px;
+
+        @include for-size(phone-only) {
+            height: 80px;
+            width: 80px;
+        }
+
+    }
+}
