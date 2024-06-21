@@ -48,7 +48,7 @@ const Experience = () => {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} id='experience'>
         <h2>Experience</h2>
         <div className={styles.cardWrapper}>
           {cardsData?.map((item, index) => (

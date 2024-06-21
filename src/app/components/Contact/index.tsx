@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React from "react";
 import styles from "./contact.module.scss";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <section className={styles.mainContainer}>
+    <section className={styles.mainContainer} id='contact'>
       <div>
         <h2>Contact</h2>
         <div className={styles.formContainer}>
@@ -31,6 +31,7 @@ const Contact = () => {
           >
             <div>
               <h4>Connect for any query</h4>
+              <h5>To get revert from Rajat</h5>
             </div>
             <div className={styles.inputContainers}>
               <label>Name</label>

@@ -49,13 +49,13 @@ const Projects = () => {
     {
       id: "6",
       name: "HRMS",
-      image: "/assets/images/ums.png",
+      image: "/assets/images/hrms.png",
       description: "Created an advanced Human Resource Management System (HRMS) using Next.js, TypeScript, MongoDB, Prism ORM, GraphQL, and other cutting-edge technologies, combining robust data handling with a user-friendly interface.",
       techStack: ["nexjts", "graphql", "MongoDB"],
     },
   ];
   return (
-    <section className={styles.mainContainer}>
+    <section className={styles.mainContainer} id='projects'>
       <div className={styles.contentContainer}>
         <h2>Projects</h2>
         <div className={styles.Wrapper}>

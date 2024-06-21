@@ -217,7 +217,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer}  id='skills'>
       <h2 className={styles.heading}>Skills</h2>
 
       <div className={styles.subContainer}>

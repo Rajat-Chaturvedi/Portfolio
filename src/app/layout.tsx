@@ -5,11 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  icons:{
-    icon: '/asset/images/metalogo.png',
-    apple: '/asset/images/metalogo:apple-icon.png'
-  },
-  title: "Rajat Chaturvedi Portfolio",
+  title: "Rajat Chaturvedi | FrontEnd Developer | FullStack Developer",
   description: "A master was once a beginner ...",
 };
 

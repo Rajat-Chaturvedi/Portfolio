@@ -1,0 +1,241 @@
+@import '../../styles/globalVariables';
+
+.section1 {
+    background-color: #f7f7f7;
+    padding: 24px;
+    // margin-top: -10px;
+    // height: 100vh;
+    z-index: 0;
+
+    @include for-size(phone-only) {
+        padding: 16px;
+    }
+
+}
+
+.leftPannel {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    background-color: $primary-bg;
+    border-radius: 12px;
+    border: 1px solid #e1e4e8;
+
+    @include for-size(phone-only) {
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
+
+.leftContentWrapper {
+    width: 100%;
+
+    div {
+        padding: 16px;
+
+        @include for-size(phone-only) {
+            padding: 12px;
+        }
+    }
+
+    h1 {
+        color: $lightBlack;
+        font-size: 18px !important;
+        font-weight: 500;
+        margin-block: 0 !important;
+        padding-bottom: 16px;
+        // text-align: justify;
+    }
+
+    p {
+        color: $Cool-Grey-600;
+        font-size: 14px !important;
+        font-weight: 500;
+        text-align: justify;
+        padding-bottom: 8px;
+        margin-block: 0 !important;
+    }
+}
+
+
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    padding: 0px !important;
+
+    button {
+        height: 40px;
+        font-size: 16px;
+        line-height: 24px;
+        width: auto;
+        min-width: 152px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+
+        span{
+            display:flex;
+            flex-direction: row;
+            gap:4px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include for-size(phone-md) {
+            width: 100% !important;
+        }
+
+        @include for-size(phone-only) {
+            width: calc((100% - 12px) / 2);
+        }
+    }
+
+    @include for-size(phone-md) {
+        flex-direction: column;
+    }
+
+
+    @include for-size(phone-only) {
+        width: 100%;
+        gap: 8px;
+    }
+}
+
+.btnLearn {
+    background-color: #f3f9f6;
+    color: #048848;
+}
+
+.btnContact {
+    background-color: #f9f5fe;
+    color: #6f10a2;
+}
+
+.trend {
+    color: #1d252d !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    margin-top: -4px;
+    margin-bottom: 0 !important;
+    padding-bottom: 4px;
+
+    @include for-size(phone-only) {
+        text-align: center;
+        font-size: 15px !important;
+    }
+}
+
+.description {
+    color: #566470 !important;
+    font-weight: 400 !important;
+
+    @include for-size(tablet-phone) {
+        font-size: 14px !important;
+    }
+
+    @include for-size(phone-only) {
+        font-size: 14px !important;
+    }
+
+    @include for-size(phone-sm) {
+        font-size: 13px !important;
+    }
+}
+
+.pannelContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 24px;
+
+    p {
+        margin-block: 0 !important;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    h1 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-block: 0 !important;
+    }
+
+    @include for-size(phone-only) {
+        flex-direction: column-reverse;
+        gap: 6px;
+    }
+}
+
+.righPanel {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+    @include for-size(phone-only) {
+        width: 100%;
+    }
+}
+
+.animationContainer {
+    position: relative;
+    /* Ensure it's positioned correctly */
+    width: 100%;
+    /* Adjust as per your layout needs */
+    height: 500px;
+    /* Adjust as per your layout needs */
+    overflow: hidden;
+    /* Hide overflow if necessary */
+
+    svg {
+        margin-top: -36px;
+        display: block;
+
+        /* Ensure SVGs are block elements */
+        &:not(:first-child) {
+            display: none;
+            /* Hide all SVGs except the first one */
+        }
+
+        @include for-size(phone-only) {
+            margin-top: -48px;
+        }
+    }
+
+
+    @include for-size(tablet-phone) {
+        height: 400px;
+    }
+
+    @include for-size(phone-only) {
+        height: 100%;
+    }
+}
+
+
+.rightPanelContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -132px;
+
+    @include for-size(tablet-phone) {
+        margin-top: -124px;
+    }
+
+
+    @include for-size(phone-sm-down) {
+        margin-top: -60px !important;
+    }
+
+    @include for-size(phone-only) {
+        margin-top: -72px;
+    }
+}

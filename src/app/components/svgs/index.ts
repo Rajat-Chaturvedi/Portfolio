@@ -1,0 +1,7 @@
+export {default as HamBurger} from './hamburger.svg'
+export {default as CV} from './cv.svg'
+export {default as Github} from './github.svg'
+export {default as Close} from './close.svg'
+export {default as Call} from './callme.svg'
+export {default as LinkedIn} from './linkedin.svg'
+export {default as Reading} from './reading.svg'
