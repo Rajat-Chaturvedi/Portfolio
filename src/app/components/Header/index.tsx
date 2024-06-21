@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import styles from "./header.module.scss";
@@ -64,7 +64,6 @@ function Header() {
           </div>
         </div>
         {/* Mid Part */}
-
         <div className={styles.headerMidWrapper}>
           <Link href="#about" passHref className={styles.navLink}>
             About
@@ -86,7 +85,6 @@ function Header() {
           </Link>
         </div>
         {/* Right Part */}
-
         <div className={styles.headerRightWrapper}>
           <Link
             href="https://www.linkedin.com/in/rajat-chaturvedi-524683187"
@@ -113,13 +111,73 @@ function Header() {
           >
             <button className={styles.buttonCV}>
               <span>
-                <CV style={{color:'#4c4c4c'}} width={32} height={22} />
+                <CV style={{ color: "#4c4c4c" }} width={32} height={22} />
                 Resume
               </span>
             </button>
           </Link>
         </div>
       </div>
+      {isMenuOpen && (
+        <div className={styles.mobileMenuContainer}>
+          <div className={styles.mobileMenuWrapper}>
+            {/* 1st Part */}
+            <div className={styles.headerMidWrapper}>
+              <Link href="#about" passHref className={styles.navLink}>
+                About
+              </Link>
+              <Link href="#experience" passHref className={styles.navLink}>
+                Works
+              </Link>
+              <Link href="#skills" passHref className={styles.navLink}>
+                Skills
+              </Link>
+              <Link href="#projects" passHref className={styles.navLink}>
+                Projects
+              </Link>
+              <Link href="#awards" passHref className={styles.navLink}>
+                Awards
+              </Link>
+              <Link href="#contact" passHref className={styles.navLink}>
+                Contact
+              </Link>
+            </div>
+            {/* 2nd Part */}
+            <div className={styles.headerRightWrapper}>
+              <button className={styles.buttonLinkedIn}>
+                <Link
+                  href="https://www.linkedin.com/in/rajat-chaturvedi-524683187"
+                  passHref
+                >
+                  <span>
+                    <LinkedIn width={32} height={22} />
+                    LinkedIn
+                  </span>
+                </Link>
+              </button>
+              <button className={styles.buttonGitHub}>
+                <Link href="https://github.com/Rajat-Chaturvedi" passHref>
+                  <span>
+                    <Github width={32} height={22} />
+                    GitHub
+                  </span>
+                </Link>
+              </button>
+              <button className={styles.buttonCV}>
+                <Link
+                  href="https://drive.google.com/file/d/1y36Ke--8uzQN-_KxJSV2OIF0CeJGWnUU/view?usp=drive_link"
+                  passHref
+                >
+                  <span>
+                    <CV style={{ color: "#4c4c4c" }} width={32} height={22} />
+                    Resume
+                  </span>
+                </Link>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

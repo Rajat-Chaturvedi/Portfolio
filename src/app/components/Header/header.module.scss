@@ -3,7 +3,6 @@
 .headerContainer {
     padding-top: 8px;
     z-index: 999;
-    position: relative;
     background: white;
     position: sticky;
     top: 0;
@@ -16,6 +15,7 @@
 }
 
 .headerSubContainer {
+    position: relative;
     display: flex;
     flex-direction: row;
     border: 1px solid #e1e4e8;
@@ -114,36 +114,18 @@
     font-weight: 500;
     font-size: 16px;
 
-    a {
-        text-align: center;
-        cursor: pointer;
-
-        &:nth-last-child(2) {
-            display: none;
-        }
-
-        &:hover {
-            color: $violet;
-        }
-
-        @include for-size(phone-only) {
-            &:nth-last-child(2) {
-                display: unset;
-            }
-        }
-
-    }
-
     @include for-size(phone-only) {
         // flex-direction: column;
         // gap: 10px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr); // 3 columns
-        grid-template-rows: repeat(2, auto); // 2 rows
+        grid-template-columns: repeat(2, 1fr); // 3 columns
+        grid-template-rows: repeat(3, auto); // 2 rows
         gap: 20px;
-        margin: 12px 0px;
+        margin: 8px 0px;
+        font-size: 14px;
         display: none;
-
+        border-bottom: 1px solid #e1e4e8 ;
+        padding-bottom: 8px;
         justify-content: center;
         align-items: center;
 
@@ -166,11 +148,31 @@
 .navLink {
     text-decoration: none;
     color: inherit;
+    text-align: center !important;
+
+    a {
+        text-align: center !important;
+        cursor: pointer;
+
+        &:nth-last-child(2) {
+            display: none;
+        }
+
+        &:hover {
+            color: $violet;
+        }
+
+        @include for-size(phone-only) {
+            &:nth-last-child(2) {
+                display: unset;
+            }
+        }
+
+    }
 }
 
 .headerRightWrapper {
-    // flex: 1;
-    justify-content: end;
+    justify-content: flex-end;
     display: flex;
     flex-direction: row;
     gap: 8px;
@@ -185,12 +187,20 @@
         font-size: 16px;
         cursor: pointer;
 
+        @include for-size(phone-only) {
+            font-size: 14px !important;
+        }
+a{
+    text-decoration: none;
+    color: unset;
+}
         span{
             display:flex;
             flex-direction: row;
             gap:4px;
             justify-content: center;
             align-items: center;
+            width: 100%;
         }
     }
 
@@ -219,5 +229,40 @@
     background: $primary-bg;
     font-weight: 500;
     border: 1px solid $lightgrey;
+    margin-bottom: 8px;
 
+}
+
+.mobileMenuContainer{
+    position: absolute;
+    top:80px;
+    z-index: 100;
+    right: 0px;
+    padding:0 12px ;
+    border-radius: 12px;
+    background-color: $primary-bg;
+    box-shadow: 0 4px 24px 0 hsla(240, 1%, 82%, .12);
+    border: 1px solid #e1e4e8;
+    width: 120px;
+    opacity: 0.8;
+}
+
+.mobileMenuWrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    overflow: hidden;
+
+    div{
+        display: grid !important;
+    }
+
+    @include for-size(phone-only) {
+        flex-direction: column;
+        gap: 4px;
+        align-items: unset;
+    }
 }

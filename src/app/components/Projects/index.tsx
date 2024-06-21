@@ -9,6 +9,7 @@ const Projects = () => {
       name: "Wasalt",
       image: "/assets/images/wasalt.png",
       description: "Wasalt is the first-ever AI-powered real estate platform in Saudi Arabia that deals in both residential as well as commercial real estate properties.",
+      link:'https://wasalt.com/en',
       techStack: ["nexjts", "strapi", "antDesign"],
     },
     {
@@ -16,6 +17,7 @@ const Projects = () => {
       name: "Wasalt Auction",
       image: "/assets/images/auction.png",
       description: "A web platform for browsing and buy commercial or residential assets from wasalt auctions via live biddings. Wasalt auctions are your home base for real estate investing in Saudi Arabia.",
+      link:'https://auction.wasalt.com/en',
       techStack: ["nextjs", "strapi", "sass"],
     },
     {
@@ -23,6 +25,7 @@ const Projects = () => {
       name: "Wasalt Auction Console",
       image: "/assets/images/auction-console.png",
       description: "A web platform enabling super admins and admins to manage auction data and monitor statistics through dashboards. Users, based on their roles, can view, edit, and upload infath auction data.",
+      link:'https://auction-console.wasalt.com/en',
       techStack: ["nextjs", "refine", "antDesign"],
     },
     {
@@ -30,6 +33,7 @@ const Projects = () => {
       name: "UMS BackOffice",
       image: "/assets/images/ums.png",
       description: "A web platform enabling super admins and admins to manage auction data and monitor statistics through dashboards. Users, based on their roles, can view, edit, and upload private auction data.",
+      link:'https://ums.wasalt.com/en',
       techStack: ["nextjs", "refine", "antDesign"],
     },
     {
@@ -37,6 +41,7 @@ const Projects = () => {
       name: "Vougish",
       image: "/assets/images/vougish.png",
       description: "A headless e-commerce web application for lifestyle and accessory products, leveraging Next.js for the frontend and Magento 2 for the backend to deliver a seamless and dynamic shopping experience.",
+      link:'https://voguish.vercel.app/',
       techStack: ["nexjts", "magento2", "MUI"],
     },
     {
@@ -44,13 +49,15 @@ const Projects = () => {
       name: "Yexpedite",
       image: "/assets/images/yexpedite.png",
       description: "Yexpedite is a dynamic website designed to streamline and enhance the logistics and shipping processes for businesses.",
-      techStack: ["nexjts", "magento2", "typscript"],
+      link:'https://www.yexpedite.com/stores',
+      techStack: ["nexjts", "magento2", "middleware"],
     },
     {
       id: "6",
       name: "HRMS",
       image: "/assets/images/hrms.png",
       description: "Created an advanced Human Resource Management System (HRMS) using Next.js, TypeScript, MongoDB, Prism ORM, GraphQL, and other cutting-edge technologies, combining robust data handling with a user-friendly interface.",
+      link:'https://drive.google.com/file/d/1RpCpx4My2xDNqXRYpWoyr-zL9QmUaybo/view?usp=drive_link',
       techStack: ["nexjts", "graphql", "MongoDB"],
     },
   ];
