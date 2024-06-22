@@ -10,7 +10,7 @@ const Awards = () => {
     "Attended a Certified WAC Workshop on IC Engine and Design at IIT Roorkee.",
   ];
   return (
-    <div className={styles.masterContainer} id='award'>
+    <div className={styles.masterContainer} id='awards'>
       <div className={styles.subContainer}>
         <h2>Awards</h2>
         <ul className={styles.listContainer}>

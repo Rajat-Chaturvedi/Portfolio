@@ -37,10 +37,6 @@
     top: 40px;
     right:20px;
 
-    a{
-        color:'#4c4c4c';
-        background-color: '#4c4c4c';
-    }
 
     span{
         position: relative;
@@ -56,6 +52,13 @@
 
         svg{top: 8px;}
 
+        a{
+            color: unset;
+            background-color: unset;
+            text-decoration: none;
+    
+        }
+
         @include for-size(phone-only){
             padding: 12px 10px 8px;
         }
@@ -68,13 +71,13 @@
 }
 
 .Arrow{
-    width: 34px;
-    height: 20px;
+    // width: 34px;
+    // height: 20px;
 
-    @include for-size(phone-only){
+    // @include for-size(phone-only){
         width: 26px;
         height: 16px;       
-    }
+    // }
 }
 
 .title {
