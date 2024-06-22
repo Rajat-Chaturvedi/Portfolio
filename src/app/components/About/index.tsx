@@ -5,6 +5,7 @@ import styles from "./about.module.scss";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Lottie from "lottie-web";
 import { Call, Reading } from "../svgs";
+import Link from "next/link";
 
 const About = () => {
   const animationData = require("../../../../public/assets/projects.json");
@@ -62,10 +63,12 @@ const About = () => {
                   </span>
                 </button>
                 <button className={styles.btnContact}>
+                <Link href='#contact' passHref>
                   <span>
                     <Call style={{ color: "#6f10a2" }} width={32} height={24} />
                     Contact Me
                   </span>
+                  </Link>
                 </button>
               </div>
             </div>

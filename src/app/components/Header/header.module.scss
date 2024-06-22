@@ -114,16 +114,14 @@
     font-size: 16px;
 
     @include for-size(phone-only) {
-        // flex-direction: column;
-        // gap: 10px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr); // 3 columns
-        grid-template-rows: repeat(3, auto); // 2 rows
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr); // 2 columns
+        grid-template-rows: repeat(3, auto); // 3 rows
+        gap: 12px;
         margin: 8px 0px;
         font-size: 14px;
         display: none;
-        border-bottom: 1px solid #e1e4e8 ;
+        border-bottom: 1px solid #e1e4e8;
         padding-bottom: 8px;
         justify-content: center;
         align-items: center;
@@ -138,8 +136,6 @@
     }
 
     @include for-size(phone-sm) {
-        grid-template-columns: repeat(2, 1fr); // 3 columns
-        grid-template-rows: repeat(3, auto); // 2 rows
         gap: 12px;
     }
 }
@@ -189,14 +185,21 @@
         @include for-size(phone-only) {
             font-size: 14px !important;
         }
-a{
-    text-decoration: none;
-    color: unset;
-}
-        span{
-            display:flex;
+
+        a {
+            text-decoration: none;
+            color: unset;
+
+            &:hover {
+                text-decoration: none;
+                color: unset;
+            }
+        }
+
+        span {
+            display: flex;
             flex-direction: row;
-            gap:4px;
+            gap: 4px;
             justify-content: center;
             align-items: center;
             width: 100%;
@@ -232,12 +235,12 @@ a{
 
 }
 
-.mobileMenuContainer{
+.mobileMenuContainer {
     position: absolute;
-    top:80px;
+    top: 80px;
     z-index: 100;
     right: 0px;
-    padding:0 12px ;
+    padding: 0 12px;
     border-radius: 12px;
     background-color: $primary-bg;
     box-shadow: 0 4px 24px 0 hsla(240, 1%, 82%, .12);
@@ -246,7 +249,7 @@ a{
     opacity: 0.88;
 }
 
-.mobileMenuWrapper{
+.mobileMenuWrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -255,7 +258,7 @@ a{
     width: 100%;
     overflow: hidden;
 
-    div{
+    div {
         display: grid !important;
     }
 

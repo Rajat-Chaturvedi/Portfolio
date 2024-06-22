@@ -55,6 +55,25 @@
         }
 
         svg{top: 8px;}
+
+        @include for-size(phone-only){
+            padding: 12px 10px 8px;
+        }
+    }
+
+          @include for-size(phone-only){
+            top: 33px;
+            right:20px;
+          }
+}
+
+.Arrow{
+    width: 34px;
+    height: 20px;
+
+    @include for-size(phone-only){
+        width: 26px;
+        height: 16px;       
     }
 }
 
