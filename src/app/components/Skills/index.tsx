@@ -39,7 +39,7 @@ const Skills = () => {
           subType: "Material UI",
         },
         {
-          image: "/assets/images/antDesign.png",
+          image: "/assets/images/antdesign.png",
           subType: "Ant Design",
         },
       ],
