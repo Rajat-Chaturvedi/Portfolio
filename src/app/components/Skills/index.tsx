@@ -135,7 +135,7 @@ const Skills = () => {
           subType: "Sentry",
         },
         {
-          image: "/assets/images/sonarQube.png",
+          image: "/assets/images/sonarqube.png",
           subType: "SonarQube",
         },
         {
