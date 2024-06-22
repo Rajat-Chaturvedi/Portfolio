@@ -37,6 +37,13 @@
     top: 40px;
     right:20px;
 
+    a{
+        color:'#4c4c4c';
+        background-color: '#4c4c4c';
+        text-decoration: none;
+
+        &:hover{text-decoration: none;}
+    }
 
     span{
         position: relative;
@@ -51,13 +58,6 @@
         }
 
         svg{top: 8px;}
-
-        a{
-            color: unset;
-            background-color: unset;
-            text-decoration: none;
-    
-        }
 
         @include for-size(phone-only){
             padding: 12px 10px 8px;

@@ -21,16 +21,16 @@ const Project: React.FC<SkillProps> = ({ item }) => {
       <div className={styles.imgContainer}>
         <img src={item?.image} alt={item?.name} />
       </div>
-      <span>
-        <Link href={item?.link} passHref className={styles.arrowWrapper}>
+      <Link href={item?.link} passHref className={styles.arrowWrapper}>
+        <span>
           <Arrow
             styles={{ color: "#4c4c4c", backgroundColor: "#4c4c4c" }}
             // width={34}
             // height={20}
             className={styles.Arrow}
           />
-        </Link>
-      </span>
+        </span>
+      </Link>
       <p className={styles.title}>{item?.name}</p>
       <div className={styles.itemContainer}>
         <p className={styles.description}>{item?.description}</p>
