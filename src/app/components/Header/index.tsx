@@ -106,7 +106,7 @@ function Header() {
             </button>
           </Link>
           <Link
-            href="https://drive.google.com/file/d/1y36Ke--8uzQN-_KxJSV2OIF0CeJGWnUU/view?usp=drive_link"
+            href="https://drive.google.com/file/d/11z2R0qmhu8rrRYpR2FEg7XDF98GwT7iB/view?usp=drive_link"
             passHref
           >
             <button className={styles.buttonCV}>
@@ -165,7 +165,7 @@ function Header() {
               </button>
               <button className={styles.buttonCV}>
                 <Link
-                  href="https://drive.google.com/file/d/1y36Ke--8uzQN-_KxJSV2OIF0CeJGWnUU/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/11z2R0qmhu8rrRYpR2FEg7XDF98GwT7iB/view?usp=drive_link"
                   passHref
                 >
                   <span>
