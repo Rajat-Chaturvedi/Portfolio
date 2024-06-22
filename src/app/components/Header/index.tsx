@@ -150,7 +150,7 @@ function Header() {
                   passHref
                 >
                   <span>
-                    <LinkedIn width={32} height={22} />
+                    <LinkedIn className={styles.icon}/>
                     LinkedIn
                   </span>
                 </Link>
@@ -158,7 +158,7 @@ function Header() {
               <button className={styles.buttonGitHub}>
                 <Link href="https://github.com/Rajat-Chaturvedi" passHref>
                   <span>
-                    <Github width={32} height={22} />
+                    <Github className={styles.icon} />
                     GitHub
                   </span>
                 </Link>
@@ -169,7 +169,7 @@ function Header() {
                   passHref
                 >
                   <span>
-                    <CV style={{ color: "#4c4c4c" }} width={32} height={22} />
+                    <CV style={{ color: "#4c4c4c" }} className={styles.icon} />
                     Resume
                   </span>
                 </Link>

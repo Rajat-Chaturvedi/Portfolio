@@ -87,7 +87,7 @@ const Skills = () => {
           subType: "GraphQL",
         },
         {
-          image: "/assets/images/restapi.png",
+          image: "/assets/images/rest.png",
           subType: "Rest API",
         },
         {

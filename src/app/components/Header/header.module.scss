@@ -62,18 +62,20 @@
 
 .hamBurgerMenu {
     display: none !important;
+    transition: width 2s ease-in-out;
     /* Hide on larger screens */
 
     button {
         background: $primary-bg;
         border: none;
         padding: 0;
+        cursor: pointer;
+        transition: width 2s ease-in-out;;
     }
 
     @include for-size(phone-only) {
         display: unset !important;
         /* Show on smaller screens */
-        cursor: pointer;
         /* Set cursor to pointer for interaction */
     }
 
@@ -84,6 +86,7 @@
     background: $primary-bg;
     border: 1px solid '#510c76';
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .logo {
@@ -210,6 +213,7 @@
         flex-direction: column;
         width: 100%;
         display: none;
+        justify-content: center;
     }
 
 }
@@ -266,5 +270,15 @@
         flex-direction: column;
         gap: 4px;
         align-items: unset;
+    }
+}
+
+.icon{
+    width: 32px;
+    height: 22px;
+
+    @include for-size(phone-only){
+        width: 20px;
+        height: 18px;
     }
 }
