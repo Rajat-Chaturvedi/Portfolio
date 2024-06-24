@@ -165,7 +165,7 @@ function Header() {
               </button>
               <button className={styles.buttonCV}>
                 <Link
-                  href="https://drive.google.com/file/d/1wvaATWDFIR39G6Kw5Ii5vLMT9F3rI5Ym/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1qeBtwIQyKHuZeNRtE7FnxltNaEW7kKcI/view?usp=drive_link"
                   passHref
                 >
                   <span>
