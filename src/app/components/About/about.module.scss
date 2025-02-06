@@ -108,6 +108,16 @@
 .btnLearn {
     background-color: #f3f9f6;
     color: #048848;
+
+    a {
+        text-decoration: none;
+        color: unset;
+
+        &:hover {
+            text-decoration: none;
+            color: unset;
+        }
+    }
 }
 
 .btnContact {
