@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./about.module.scss";
@@ -47,27 +47,55 @@ const About = () => {
                 <Cursor />
               </h1>
               <p className={styles.B}>
-                I am a FrontEnd Developer eager to gain full-stack experience
-                and enthusiastic about exploring the full potential of the
-                Next.js framework.
+                Full-Stack Developer with a strong focus on Front-End
+                Development and 3+ years of hands-on experience. I have
+                successfully led 10+ projects, achieving a 30% boost in user
+                interaction, 20% reduction in page load times, and a 25%
+                increase in user satisfaction. My passion lies in building
+                user-centric web applications that deliver seamless, engaging,
+                and visually appealing experiences.
+              </p>
+              <p className={styles.B}>
+                Proficient in the entire development lifecycle, I excel at
+                transforming wireframes into functional, high-performance web
+                pages with SEO-optimized code and cross-browser compatibility.
+                While I possess solid back-end development knowledge, my
+                expertise shines in front-end implementation using modern
+                frameworks like Next.js, React.js, and Redux.
+              </p>
+              <p>
+                I am deeply enthusiastic about exploring the full potential of
+                Next.js and expanding my skill set to become a well-rounded
+                Full-Stack Developer. My goal is to leverage my expertise in
+                React and front-end development to contribute to innovative
+                projects and drive your team’s success.
               </p>
               <div className={styles.buttonWrapper}>
                 <button className={styles.btnLearn}>
-                  <span>
-                    <Reading
-                      style={{ color: "#048848" }}
-                      width={32}
-                      height={24}
-                    />
-                    Learn More
-                  </span>
+                  <Link
+                    href="https://drive.google.com/file/d/1Cl7V1YDpLlJfhdIsnnGQzEOwKoh2MYQD/view?usp=drive_link"
+                    passHref
+                  >
+                    <span>
+                      <Reading
+                        style={{ color: "#048848" }}
+                        width={32}
+                        height={24}
+                      />
+                      Learn More
+                    </span>
+                  </Link>
                 </button>
                 <button className={styles.btnContact}>
-                <Link href='#contact' passHref>
-                  <span>
-                    <Call style={{ color: "#6f10a2" }} width={32} height={24} />
-                    Contact Me
-                  </span>
+                  <Link href="#contact" passHref>
+                    <span>
+                      <Call
+                        style={{ color: "#6f10a2" }}
+                        width={32}
+                        height={24}
+                      />
+                      Contact Me
+                    </span>
                   </Link>
                 </button>
               </div>
