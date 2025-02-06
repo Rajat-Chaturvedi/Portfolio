@@ -80,7 +80,7 @@ const About = () => {
           <div className={styles.rightPanelContent}>
             <h1 className={styles.trend}>Coding | Learnings | LifeStyles</h1>
             <p className={styles.description}>
-              3 Years of Experience | 8 Projects completed
+              3+ Years of Experience | 9+ Projects completed
             </p>
           </div>
         </div>

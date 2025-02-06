@@ -69,13 +69,25 @@ const Skills = () => {
           subType: "Redux",
         },
         {
+          image: "/assets/images/magento-pwa.png",
+          subType: "Magento PWA",
+        },
+        {
+          image: "/assets/images/pwa.png",
+          subType: "PWA",
+        },
+        {
+          image: "/assets/images/node.png",
+          subType: "NodeJs",
+        },
+        {
           image: "/assets/images/reactnative.png",
           subType: "React Native",
         },
       ],
     },
     {
-      id: "4",
+      id: "3",
       skill: "Backend",
       type: [
         {
@@ -109,6 +121,36 @@ const Skills = () => {
       ],
     },
     {
+      id: "4",
+      skill: "Payment Gateways",
+      type: [
+        {
+          image: "/assets/images/amazonpay.png",
+          subType: "Amazon Pay Front",
+        },
+        {
+          image: "/assets/images/applepay.png",
+          subType: "Apple Pay",
+        },
+        {
+          image: "/assets/images/checkout.png",
+          subType: "Checkout.com",
+        },
+        {
+          image: "/assets/images/stripe.png",
+          subType: "Stripe",
+        },
+        {
+          image: "/assets/images/tabby.png",
+          subType: "Tabby",
+        },
+        {
+          image: "/assets/images/tamara.png",
+          subType: "Tamara",
+        },
+      ],
+    },
+    {
       id: "5",
       skill: "CMS",
       type: [
@@ -126,6 +168,7 @@ const Skills = () => {
         },
       ],
     },
+
     {
       id: "6",
       skill: "Analytics & Monitoring",
@@ -178,6 +221,10 @@ const Skills = () => {
           image: "/assets/images/figma.png",
           subType: "Figma",
         },
+        {
+          image: "/assets/images/creatie.png",
+          subType: "Creatie",
+        },
       ],
     },
     {
@@ -217,7 +264,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className={styles.mainContainer}  id='skills'>
+    <div className={styles.mainContainer} id="skills">
       <h2 className={styles.heading}>Skills</h2>
 
       <div className={styles.subContainer}>

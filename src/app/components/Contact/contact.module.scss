@@ -3,6 +3,7 @@
 .mainContainer {
     background: linear-gradient(180deg, #f4faff 20%, #fff 25%, #fff);
     padding: 12px;
+    
 
     div {
         padding: 12px;
@@ -47,6 +48,17 @@
         }
     }
 
+}
+
+.Wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @include for-size(phone-only) {
+        display: block;
+        
+    }
 }
 
 .formContainer {

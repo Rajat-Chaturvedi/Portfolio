@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import styles from "./contact.module.scss";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -21,63 +21,65 @@ const Contact = () => {
   };
 
   return (
-    <section className={styles.mainContainer} id='contact'>
+    <section className={styles.mainContainer} id="contact">
       <div>
         <h2>Contact</h2>
-        <div className={styles.formContainer}>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className={styles.contactForm}
-          >
-            <div>
-              <h4>Connect for any query</h4>
-              <h5>To get revert from Rajat</h5>
-            </div>
-            <div className={styles.inputContainers}>
-              <label>Name</label>
-              <input
-                {...register("name")}
-                placeholder="Name"
-                type="text"
-                className=""
-              />
-            </div>
+        <div className={styles.Wrapper}>
+          <div className={styles.formContainer}>
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className={styles.contactForm}
+            >
+              <div>
+                <h4>Connect for any query</h4>
+                <h5>To get revert from Rajat</h5>
+              </div>
+              <div className={styles.inputContainers}>
+                <label>Name</label>
+                <input
+                  {...register("name")}
+                  placeholder="Name"
+                  type="text"
+                  className=""
+                />
+              </div>
 
-            <div className={styles.inputContainers}>
-              <label>Email</label>
-              <input
-                {...register("email")}
-                placeholder="Email"
-                type="email"
-                className=""
-              />
-            </div>
+              <div className={styles.inputContainers}>
+                <label>Email</label>
+                <input
+                  {...register("email")}
+                  placeholder="Email"
+                  type="email"
+                  className=""
+                />
+              </div>
 
-            <div className={styles.inputContainers}>
-              <label>Subject</label>
-              <input
-                placeholder="Subject"
-                {...register("subject")}
-                className=""
-                type="text"
-              />
-            </div>
+              <div className={styles.inputContainers}>
+                <label>Subject</label>
+                <input
+                  placeholder="Subject"
+                  {...register("subject")}
+                  className=""
+                  type="text"
+                />
+              </div>
 
-            <div className={styles.inputContainers}>
-              <label>Message</label>
-              <textarea
-                {...register("message")}
-                placeholder="Message"
-                className=""
-              ></textarea>
-            </div>
+              <div className={styles.inputContainers}>
+                <label>Message</label>
+                <textarea
+                  {...register("message")}
+                  placeholder="Message"
+                  className=""
+                ></textarea>
+              </div>
 
-            <div>
-              <button type="submit" className={styles.submitBtn}>
-                Submit
-              </button>
-            </div>
-          </form>
+              <div>
+                <button type="submit" className={styles.submitBtn}>
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
