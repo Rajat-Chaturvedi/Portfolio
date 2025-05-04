@@ -106,7 +106,7 @@ function Header() {
             </button>
           </Link>
           <Link
-            href="https://drive.google.com/file/d/1Cl7V1YDpLlJfhdIsnnGQzEOwKoh2MYQD/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1oMxQJJLfSWRDzyh2DLiEQ2aaCesNbpyf/view?usp=drive_link"
             passHref
           >
             <button className={styles.buttonCV}>
@@ -150,7 +150,7 @@ function Header() {
                   passHref
                 >
                   <span>
-                    <LinkedIn className={styles.icon}/>
+                    <LinkedIn className={styles.icon} />
                     LinkedIn
                   </span>
                 </Link>
@@ -165,7 +165,7 @@ function Header() {
               </button>
               <button className={styles.buttonCV}>
                 <Link
-                  href="https://drive.google.com/file/d/1Cl7V1YDpLlJfhdIsnnGQzEOwKoh2MYQD/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1oMxQJJLfSWRDzyh2DLiEQ2aaCesNbpyf/view?usp=drive_link"
                   passHref
                 >
                   <span>
