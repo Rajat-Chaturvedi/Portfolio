@@ -73,6 +73,7 @@ const About = () => {
               <div className={styles.buttonWrapper}>
                 <button className={styles.btnLearn}>
                   <Link
+                    target="_blank"
                     href="https://drive.google.com/file/d/1aIvEo07boKmmFPijFTHZ5vO1oxkvxtxh/view?usp=sharing"
                     passHref
                   >
