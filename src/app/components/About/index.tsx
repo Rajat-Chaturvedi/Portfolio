@@ -48,7 +48,7 @@ const About = () => {
               </h1>
               <p className={styles.B}>
                 Full-Stack Developer with a strong focus on Front-End
-                Development and 3+ years of hands-on experience. I have
+                Development and 4+ years of hands-on experience. I have
                 successfully led 10+ projects, achieving a 30% boost in user
                 interaction, 20% reduction in page load times, and a 25%
                 increase in user satisfaction. My passion lies in building
@@ -73,7 +73,7 @@ const About = () => {
               <div className={styles.buttonWrapper}>
                 <button className={styles.btnLearn}>
                   <Link
-                    href="https://drive.google.com/file/d/1Cl7V1YDpLlJfhdIsnnGQzEOwKoh2MYQD/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1aIvEo07boKmmFPijFTHZ5vO1oxkvxtxh/view?usp=sharing"
                     passHref
                   >
                     <span>
@@ -108,7 +108,7 @@ const About = () => {
           <div className={styles.rightPanelContent}>
             <h1 className={styles.trend}>Coding | Learnings | LifeStyles</h1>
             <p className={styles.description}>
-              3+ Years of Experience | 9+ Projects completed
+              4+ Years of Experience | 10+ Projects completed
             </p>
           </div>
         </div>

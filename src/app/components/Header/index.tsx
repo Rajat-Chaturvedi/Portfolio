@@ -87,6 +87,7 @@ function Header() {
         {/* Right Part */}
         <div className={styles.headerRightWrapper}>
           <Link
+            target="_blank"
             href="https://www.linkedin.com/in/rajat-chaturvedi-524683187"
             passHref
           >
@@ -97,7 +98,11 @@ function Header() {
               </span>
             </button>
           </Link>
-          <Link href="https://github.com/Rajat-Chaturvedi" passHref>
+          <Link
+            target="_blank"
+            href="https://github.com/Rajat-Chaturvedi"
+            passHref
+          >
             <button className={styles.buttonGitHub}>
               <span>
                 <Github width={32} height={22} />
@@ -106,7 +111,8 @@ function Header() {
             </button>
           </Link>
           <Link
-            href="https://drive.google.com/file/d/1oMxQJJLfSWRDzyh2DLiEQ2aaCesNbpyf/view?usp=drive_link"
+            target="_blank"
+            href="https://drive.google.com/file/d/1aIvEo07boKmmFPijFTHZ5vO1oxkvxtxh/view?usp=sharing"
             passHref
           >
             <button className={styles.buttonCV}>
@@ -146,6 +152,7 @@ function Header() {
             <div className={styles.headerRightWrapper}>
               <button className={styles.buttonLinkedIn}>
                 <Link
+                  target="_blank"
                   href="https://www.linkedin.com/in/rajat-chaturvedi-524683187"
                   passHref
                 >
@@ -156,7 +163,11 @@ function Header() {
                 </Link>
               </button>
               <button className={styles.buttonGitHub}>
-                <Link href="https://github.com/Rajat-Chaturvedi" passHref>
+                <Link
+                  target="_blank"
+                  href="https://github.com/Rajat-Chaturvedi"
+                  passHref
+                >
                   <span>
                     <Github className={styles.icon} />
                     GitHub
@@ -165,7 +176,8 @@ function Header() {
               </button>
               <button className={styles.buttonCV}>
                 <Link
-                  href="https://drive.google.com/file/d/1oMxQJJLfSWRDzyh2DLiEQ2aaCesNbpyf/view?usp=drive_link"
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1aIvEo07boKmmFPijFTHZ5vO1oxkvxtxh/view?usp=sharing"
                   passHref
                 >
                   <span>
