@@ -94,7 +94,7 @@ function Header() {
             <button className={styles.buttonLinkedIn}>
               <span>
                 <LinkedIn width={32} height={22} />
-                LinkedIn
+                <span className={styles.btnText}>LinkedIn</span>
               </span>
             </button>
           </Link>
@@ -106,7 +106,7 @@ function Header() {
             <button className={styles.buttonGitHub}>
               <span>
                 <Github width={32} height={22} />
-                GitHub
+                <span className={styles.btnText}>GitHub</span>
               </span>
             </button>
           </Link>
@@ -118,7 +118,7 @@ function Header() {
             <button className={styles.buttonCV}>
               <span>
                 <CV style={{ color: "#4c4c4c" }} width={32} height={22} />
-                Resume
+                <span className={styles.btnText}>Resume</span>
               </span>
             </button>
           </Link>
@@ -158,7 +158,7 @@ function Header() {
                 >
                   <span>
                     <LinkedIn className={styles.icon} />
-                    LinkedIn
+                    <span className={styles.btnText}>LinkedIn</span>
                   </span>
                 </Link>
               </button>
@@ -170,7 +170,7 @@ function Header() {
                 >
                   <span>
                     <Github className={styles.icon} />
-                    GitHub
+                    <span className={styles.btnText}>GitHub</span>
                   </span>
                 </Link>
               </button>
@@ -182,7 +182,7 @@ function Header() {
                 >
                   <span>
                     <CV style={{ color: "#4c4c4c" }} className={styles.icon} />
-                    Resume
+                    <span className={styles.btnText}>Resume</span>
                   </span>
                 </Link>
               </button>
