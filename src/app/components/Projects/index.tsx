@@ -11,15 +11,7 @@ const Projects = () => {
       description:
         "The Kanaa is an e-commerce platform tailored for the GCC market, offering a curated range of products across categories with an intuitive shopping experience and optimized performance.",
       link: "https://thekanaa.com/en-sa/",
-      techStack: [
-        "nextjs",
-        "pwa",
-        "magento2",
-        "sass",
-        "graphQL",
-        "BNPL",
-        "HyperPay",
-      ],
+      techStack: ["nextjs", "pwa", "magento2", "graphQL"],
     },
     {
       id: "1",
@@ -28,16 +20,7 @@ const Projects = () => {
       description:
         "MECL (ME Stores) is a large-scale e-commerce platform serving the Saudi market, offering a wide range of consumer products with a focus on performance, scalability, and seamless shopping experience.",
       link: "https://mestores.com/en_sa",
-      techStack: [
-        "nextjs",
-        "pwa",
-        "magento2",
-        "sass",
-        "graphQL",
-        "BNPL",
-        "Checkout.com",
-        "Apple Pay",
-      ],
+      techStack: ["nextjs", "pwa", "magento2", "graphQL", "sass"],
     },
     {
       id: "2",
