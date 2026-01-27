@@ -112,7 +112,7 @@ function Header() {
           </Link>
           <Link
             target="_blank"
-            href="https://drive.google.com/file/d/1aIvEo07boKmmFPijFTHZ5vO1oxkvxtxh/view?usp=sharing"
+            href="https://drive.google.com/file/d/144BvkzYWkgwLh_f0H06EHbIoIq-2wBzl/view?usp=sharing"
             passHref
           >
             <button className={styles.buttonCV}>
@@ -177,7 +177,7 @@ function Header() {
               <button className={styles.buttonCV}>
                 <Link
                   target="_blank"
-                  href="https://drive.google.com/file/d/1aIvEo07boKmmFPijFTHZ5vO1oxkvxtxh/view?usp=sharing"
+                  href="https://drive.google.com/file/d/144BvkzYWkgwLh_f0H06EHbIoIq-2wBzl/view?usp=sharing"
                   passHref
                 >
                   <span>
