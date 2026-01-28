@@ -1,39 +1,60 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./about.module.scss";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Lottie from "lottie-web";
 import { Call, Reading } from "../svgs";
 import Link from "next/link";
 
-const About = () => {
-  const animationData = require("../../../../public/assets/projects.json");
-  const [text, count] = useTypewriter({
-    words: [
-      "Hi, I am Rajat Chaturvedi.",
-      "I am a Software Engineer.",
-      "Passionate about crafting engaging user interfaces and developing dynamic websites.",
-    ],
+interface AboutProps {
+  data: {
+    title: string;
+    role: string;
+    summary: string;
+    paragraphs: string;
+    resume?: string;
+    typewriterTexts: string[];
+    experienceStats: string;
+  } | null;
+}
+
+const About: React.FC<AboutProps> = ({ data }) => {
+  const container = useRef<HTMLDivElement>(null);
+
+  // ✅ SAFE FALLBACKS (important)
+  const typewriterWords = data?.typewriterTexts?.length
+    ? data.typewriterTexts
+    : ["Hi, I am Rajat Chaturvedi."];
+
+  const [text] = useTypewriter({
+    words: typewriterWords,
     loop: true,
     delaySpeed: 2000,
   });
-  const [margin, setMargin] = useState(true);
-
-  const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (container.current) {
-      Lottie.loadAnimation({
-        container: container.current,
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-      });
-      setMargin(false);
-    }
-  }, [animationData]);
+    if (!container.current) return;
+
+    const animation = Lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../../../../public/assets/projects.json"),
+    });
+
+    return () => animation.destroy();
+  }, []);
+
+  // ✅ JSX-level guard (NOT hook-level)
+  if (!data) {
+    return (
+      <section className={styles.section1} id="about">
+        <p>Loading...</p>
+      </section>
+    );
+  }
 
   return (
     <section className={styles.section1}>
@@ -46,47 +67,25 @@ const About = () => {
                 <span>{text}</span>
                 <Cursor />
               </h1>
-              <p className={styles.B}>
-                Full-Stack Developer with a strong focus on Front-End
-                Development and 4+ years of hands-on experience. I have
-                successfully led 10+ projects, achieving a 30% boost in user
-                interaction, 20% reduction in page load times, and a 25%
-                increase in user satisfaction. My passion lies in building
-                user-centric web applications that deliver seamless, engaging,
-                and visually appealing experiences.
-              </p>
-              <p className={styles.B}>
-                Proficient in the entire development lifecycle, I excel at
-                transforming wireframes into functional, high-performance web
-                pages with SEO-optimized code and cross-browser compatibility.
-                While I possess solid back-end development knowledge, my
-                expertise shines in front-end implementation using modern
-                frameworks like Next.js, React.js, and Redux.
-              </p>
-              <p>
-                I am deeply enthusiastic about exploring the full potential of
-                Next.js and expanding my skill set to become a well-rounded
-                Full-Stack Developer. My goal is to leverage my expertise in
-                React and front-end development to contribute to innovative
-                projects and drive your team’s success.
-              </p>
+
+              <p className={styles.B}>{data.summary}</p>
+              <p className={styles.B}>{data.paragraphs}</p>
+
               <div className={styles.buttonWrapper}>
-                <button className={styles.btnLearn}>
-                  <Link
-                    target="_blank"
-                    href="https://drive.google.com/file/d/144BvkzYWkgwLh_f0H06EHbIoIq-2wBzl/view?usp=sharing"
-                    passHref
-                  >
-                    <span>
-                      <Reading
-                        style={{ color: "#048848" }}
-                        width={32}
-                        height={24}
-                      />
-                      Learn More
-                    </span>
-                  </Link>
-                </button>
+                {data.resume && (
+                  <button className={styles.btnLearn}>
+                    <Link
+                      target="_blank"
+                      href="https://drive.google.com/file/d/144BvkzYWkgwLh_f0H06EHbIoIq-2wBzl/view?usp=sharing"
+                      passHref
+                    >
+                      <span>
+                        <Reading width={24} height={24} /> Learn More{" "}
+                      </span>
+                    </Link>
+                  </button>
+                )}
+
                 <button className={styles.btnContact}>
                   <Link href="#contact" passHref>
                     <span>
@@ -105,12 +104,10 @@ const About = () => {
         </div>
         {/* right section */}
         <div className={styles.righPanel}>
-          <div ref={container} className={styles.animationContainer}></div>
+          <div ref={container} className={styles.animationContainer} />
           <div className={styles.rightPanelContent}>
-            <h1 className={styles.trend}>Coding | Learnings | LifeStyles</h1>
-            <p className={styles.description}>
-              4+ Years of Experience | 10+ Projects completed
-            </p>
+            <h1 className={styles.trend}>{data.role}</h1>
+            <p className={styles.description}>{data.experienceStats}</p>
           </div>
         </div>
       </div>

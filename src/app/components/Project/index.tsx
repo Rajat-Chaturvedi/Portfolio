@@ -2,43 +2,54 @@ import React from "react";
 import styles from "./project.module.scss";
 import { Arrow } from "../svgs";
 import Link from "next/link";
+import Image from "next/image";
 
-// Define the type for the props
-interface SkillProps {
+interface ProjectProps {
   item: {
-    id: string;
+    id: number;
     name: string;
-    image: string;
+    image: string; // full Strapi URL
     description: string;
     link: string;
-    techStack: string[]; // Assuming type is an array of objects with id and name properties
+    techStack: string[];
   };
 }
 
-const Project: React.FC<SkillProps> = ({ item }) => {
+const Project: React.FC<ProjectProps> = ({ item }) => {
   return (
     <div className={styles.contentContainer}>
+      {/* Image */}
       <div className={styles.imgContainer}>
         <img src={item?.image} alt={item?.name} />
       </div>
-      <Link href={item?.link} passHref className={styles.arrowWrapper}>
+
+      {/* External link */}
+      <Link
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.arrowWrapper}
+      >
         <span>
           <Arrow
             styles={{ color: "#4c4c4c", backgroundColor: "#4c4c4c" }}
-            // width={34}
-            // height={20}
             className={styles.Arrow}
           />
         </span>
       </Link>
-      <p className={styles.title}>{item?.name}</p>
+
+      {/* Title */}
+      <p className={styles.title}>{item.name}</p>
+
+      {/* Description + stack */}
       <div className={styles.itemContainer}>
-        <p className={styles.description}>{item?.description}</p>
+        <p className={styles.description}>{item.description}</p>
+
         <p className={styles.techStack}>
           <span className={styles.techStackTitle}>Stack :</span>
-          {item?.techStack.map((subItem, index) => (
+          {item.techStack.map((tech, index) => (
             <span key={index} className={styles.techStackName}>
-              #{subItem}
+              #{tech}
             </span>
           ))}
         </p>

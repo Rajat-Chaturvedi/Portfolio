@@ -5,17 +5,21 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Awards from "./components/Awards";
+import { getProjects } from "./utils/api/projects";
+import { getAbout } from "./utils/api/about";
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getProjects();
+  const about = await getAbout();
   return (
     <main className="">
       <Header />
-      <About />
+      <About data={about} />
       <Experience />
       <Skills />
-      <Projects />
+      <Projects projects={projects} />
       <Awards />
-      <Contact/>
+      <Contact />
     </main>
   );
 }
