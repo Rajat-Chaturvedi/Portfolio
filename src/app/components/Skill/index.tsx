@@ -1,26 +1,25 @@
 import React from "react";
 import styles from "./skill.module.scss";
+import { SkillItem } from "@/app/utils/skillMapper";
 
-// Define the type for the props
 interface SkillProps {
-  item: {
-    id: string;
-    skill: string;
-    type: { image: string; subType: string }[]; // Assuming type is an array of objects with id and name properties
-  };
+  item: SkillItem;
 }
 
 const Skill: React.FC<SkillProps> = ({ item }) => {
   return (
     <div className={styles.contentContainer}>
-      <p>{item?.skill}</p>
+      <p>{item.name}</p>
+
       <div className={styles.imageWrapper}>
-        {item?.type.map((subItem, index) => (
-          <div key={index} className={styles.itemContainer}>
-            <div className={styles.imgContainer}>
-              <img src={subItem?.image} alt={subItem?.subType} />
-            </div>
-            <h6>{subItem?.subType}</h6>
+        {item.types.map((type) => (
+          <div key={type.id} className={styles.itemContainer}>
+            {type.icon && (
+              <div className={styles.imgContainer}>
+                <img src={type.icon.url} alt={type.subType} loading="lazy" />
+              </div>
+            )}
+            <h6>{type.subType}</h6>
           </div>
         ))}
       </div>

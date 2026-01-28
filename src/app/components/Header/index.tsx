@@ -5,7 +5,15 @@ import styles from "./header.module.scss";
 import Link from "next/link";
 import { CV, Close, Github, HamBurger, LinkedIn } from "../svgs";
 
-function Header() {
+interface HeaderProps {
+  links: {
+    github: string;
+    linkedin: string;
+    resume: string;
+  };
+}
+
+function Header({ links }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -88,7 +96,7 @@ function Header() {
         <div className={styles.headerRightWrapper}>
           <Link
             target="_blank"
-            href="https://www.linkedin.com/in/rajat-chaturvedi-524683187"
+            href={links.linkedin}
             passHref
           >
             <button className={styles.buttonLinkedIn}>
@@ -100,7 +108,7 @@ function Header() {
           </Link>
           <Link
             target="_blank"
-            href="https://github.com/Rajat-Chaturvedi"
+            href={links.github}
             passHref
           >
             <button className={styles.buttonGitHub}>
@@ -112,7 +120,7 @@ function Header() {
           </Link>
           <Link
             target="_blank"
-            href="https://drive.google.com/file/d/144BvkzYWkgwLh_f0H06EHbIoIq-2wBzl/view?usp=sharing"
+            href={links.resume}
             passHref
           >
             <button className={styles.buttonCV}>
@@ -153,7 +161,7 @@ function Header() {
               <button className={styles.buttonLinkedIn}>
                 <Link
                   target="_blank"
-                  href="https://www.linkedin.com/in/rajat-chaturvedi-524683187"
+                  href={links.linkedin}
                   passHref
                 >
                   <span>
@@ -165,7 +173,7 @@ function Header() {
               <button className={styles.buttonGitHub}>
                 <Link
                   target="_blank"
-                  href="https://github.com/Rajat-Chaturvedi"
+                  href={links.github}
                   passHref
                 >
                   <span>
@@ -177,7 +185,7 @@ function Header() {
               <button className={styles.buttonCV}>
                 <Link
                   target="_blank"
-                  href="https://drive.google.com/file/d/144BvkzYWkgwLh_f0H06EHbIoIq-2wBzl/view?usp=sharing"
+                  href={links.resume}
                   passHref
                 >
                   <span>

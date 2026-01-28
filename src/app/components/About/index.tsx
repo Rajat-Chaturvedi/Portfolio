@@ -9,7 +9,6 @@ import Link from "next/link";
 
 interface AboutProps {
   data: {
-    title: string;
     role: string;
     summary: string;
     paragraphs: string;

@@ -1,14 +1,31 @@
-export function mapAbout(apiResponse: any) {
+// types/about.ts
+export interface About {
+  id: number;
+  name: string;
+  role: string;
+  summary: string;
+  paragraphs: string;
+  resumeUrl: string;
+  gitHubUrl: string;
+  linkedInUrl: string;
+  typewriterTexts: string[];
+  experienceStats: string;
+}
+
+export function mapAbout(apiResponse: any): About | null {
   const data = apiResponse?.data;
 
   if (!data) return null;
 
   return {
-    title: data.name, // 👈 FIX
+    id: data.id,
+    name: data.name, // ✅ NOT title
     role: data.role,
     summary: data.summary,
     paragraphs: data.paragraphs,
-    resume: data.resumeUrl,
+    resumeUrl: data.resumeUrl, // ✅ NOT resume
+    gitHubUrl: data.gitHubUrl, // ✅ added
+    linkedInUrl: data.linkedInUrl, // ✅ added
     typewriterTexts: data.typewriterTexts ?? [],
     experienceStats: data.experienceStats,
   };
