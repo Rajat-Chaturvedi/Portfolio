@@ -12,7 +12,7 @@ interface AboutProps {
     role: string;
     summary: string;
     paragraphs: string;
-    resume?: string;
+    resumeUrl?: string;
     typewriterTexts: string[];
     experienceStats: string;
   } | null;
@@ -71,11 +71,11 @@ const About: React.FC<AboutProps> = ({ data }) => {
               <p className={styles.B}>{data.paragraphs}</p>
 
               <div className={styles.buttonWrapper}>
-                {data.resume && (
+                {data.resumeUrl && (
                   <button className={styles.btnLearn}>
                     <Link
                       target="_blank"
-                      href="https://drive.google.com/file/d/144BvkzYWkgwLh_f0H06EHbIoIq-2wBzl/view?usp=sharing"
+                      href={data.resumeUrl}
                       passHref
                     >
                       <span>
