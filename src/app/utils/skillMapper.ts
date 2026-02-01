@@ -21,7 +21,7 @@ export function mapSkills(data: any[]): SkillItem[] {
     types: skill.types.map((type: any) => ({
       id: type.id,
       subType: type.subType,
-      icon: type.icon ? { url: `${STRAPI_URL}${type.icon.url}` } : null,
+      icon: type.icon ? { url: `${type.icon.url}` } : null,
     })),
   }));
 }

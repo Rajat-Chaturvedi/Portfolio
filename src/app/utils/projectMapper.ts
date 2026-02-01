@@ -3,7 +3,7 @@ export function mapProjects(strapiData: any[]) {
     const attributes = item.attributes ?? item;
 
     const imageUrl = attributes.image?.url
-      ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${attributes.image.url}`
+      ? `${attributes.image.url}`
       : "";
 
     return {
