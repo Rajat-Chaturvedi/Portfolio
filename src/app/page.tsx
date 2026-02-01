@@ -24,13 +24,6 @@ export default async function Home() {
 
   return (
     <main className="">
-      <Header
-        links={{
-          github: about.gitHubUrl,
-          linkedin: about.linkedInUrl,
-          resume: about.resumeUrl,
-        }}
-      />
       <About data={about} />
       <Experience data={experiences} />
       <Skills data={skills} />
