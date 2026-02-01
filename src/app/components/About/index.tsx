@@ -46,6 +46,10 @@ const About: React.FC<AboutProps> = ({ data }) => {
     return () => animation.destroy();
   }, []);
 
+  const [left, right] = data?.experienceStats
+    .split("|")
+    .map((s) => s.trim()) || ["", ""];
+
   // ✅ JSX-level guard (NOT hook-level)
   if (!data) {
     return (
@@ -73,11 +77,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
               <div className={styles.buttonWrapper}>
                 {data.resumeUrl && (
                   <button className={styles.btnLearn}>
-                    <Link
-                      target="_blank"
-                      href={data.resumeUrl}
-                      passHref
-                    >
+                    <Link target="_blank" href={data.resumeUrl} passHref>
                       <span>
                         <Reading width={24} height={24} /> Learn More{" "}
                       </span>
@@ -106,7 +106,11 @@ const About: React.FC<AboutProps> = ({ data }) => {
           <div ref={container} className={styles.animationContainer} />
           <div className={styles.rightPanelContent}>
             <h1 className={styles.trend}>{data.role}</h1>
-            <p className={styles.description}>{data.experienceStats}</p>
+            <div className={styles.experienceStrip}>
+              <span>{left}</span>
+              <span className={styles.separator}> | </span>
+              <span>{right}</span>
+            </div>
           </div>
         </div>
       </div>
