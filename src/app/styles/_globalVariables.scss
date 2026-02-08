@@ -1,8 +1,8 @@
-@import './fx.scss';
+@import "./fx.scss";
 
 // Color
-$primary-font: 'Jost', 'Noto Kufi Arabic', sans-serif;
-$arabic-font: 'Noto Kufi Arabic', sans-serif;
+$primary-font: "Jost", "Noto Kufi Arabic", sans-serif;
+$arabic-font: "Noto Kufi Arabic", sans-serif;
 $primary-bg: #fff;
 // Font size
 $font10: 10px;
@@ -87,82 +87,82 @@ $pad60: 60px;
 /* Variables */
 /* Color Variables */
 $black: #000000 !default;
-$white: #FFFFFF !default;
+$white: #ffffff !default;
 $Cool-Grey-600: #485661 !default;
-$Cool-Grey-700: #36434E !default;
-$Cool-Grey-900: #1D252D !default;
-$primary-color: #EEEEEE !default;
-$secondary-color: #4B276B !default;
-$tertiary-color: #EBEAED !default; // used in menu background
-$heading-color: #510C76 !default;
-$heading-light: #73558C !default;
-$warning-color: #FF974C !default;
-$error-color: #D50000 !default;
+$Cool-Grey-700: #36434e !default;
+$Cool-Grey-900: #1d252d !default;
+$primary-color: #eeeeee !default;
+$secondary-color: #4b276b !default;
+$tertiary-color: #ebeaed !default; // used in menu background
+$heading-color: #510c76 !default;
+$heading-light: #73558c !default;
+$warning-color: #ff974c !default;
+$error-color: #d50000 !default;
 $default-color: #464646 !default;
-$background-color: #F2F2F2 !default;
-$card-border-light: #EFEFEF !default;
-$card-border-dark: #E2E2E2 !default;
-$background-gray-light: #F8F8F8 !default;
+$background-color: #f2f2f2 !default;
+$card-border-light: #efefef !default;
+$card-border-dark: #e2e2e2 !default;
+$background-gray-light: #f8f8f8 !default;
 $background-mute: #454343;
-$color-mute-dark: #685D71;
-$color-mute: #837B8B;
+$color-mute-dark: #685d71;
+$color-mute: #837b8b;
 $transparent: transparent;
 $light-textcolor: #363636;
-$magento: #A82594;
-$purple: #73558C;
+$magento: #a82594;
+$purple: #73558c;
 $green-dark: #048558;
-$green-light: #D1F1E6;
-$sky-blue: #57C0C3;
+$green-light: #d1f1e6;
+$sky-blue: #57c0c3;
 $sky-blue-light: #39caad15;
-$border-color-light: #E5E5E6;
-$card-border-hover: #864EF2 !important;
+$border-color-light: #e5e5e6;
+$card-border-hover: #864ef2 !important;
 $fav-text-color: #035739;
-$default-marker-color: #4A4C4F;
-$default-marker-color-updated: #4C4C4C;
-$matchmaker-autofill-color: #F0EBF9;
-$matchmaker-autofill-color-border: #6F10A2;
-$error-failed: #EE5441;
-$error-failed-bg: #FCE6E6;
-$alert-bg:#fff0d9;
-$ghost-button-border: #C198D9;
-$green-success: #10A26F;
-$whatsapp-icon: #4CAF50;
-$light-golden:#FBF2E4;
-$golgen: #C37D13;
-$color-green-light: #4CAF50;
-$high-dark-green : #2B8700;
-$profile-revamp-green: #29831A;
-$light-green:#EBF5E5;
+$default-marker-color: #4a4c4f;
+$default-marker-color-updated: #4c4c4c;
+$matchmaker-autofill-color: #f0ebf9;
+$matchmaker-autofill-color-border: #6f10a2;
+$error-failed: #ee5441;
+$error-failed-bg: #fce6e6;
+$alert-bg: #fff0d9;
+$ghost-button-border: #c198d9;
+$green-success: #10a26f;
+$whatsapp-icon: #25d366;
+$light-golden: #fbf2e4;
+$golgen: #c37d13;
+$color-green-light: #4caf50;
+$high-dark-green: #2b8700;
+$profile-revamp-green: #29831a;
+$light-green: #ebf5e5;
 $lightBlack: #191919;
-$color-gray: #4A4C4F;
-$color-grey-600 : #4C4C4C;
+$color-gray: #4a4c4f;
+$color-grey-600: #4c4c4c;
 $color-gray-light: #737373;
 $color-dim-black: #222222;
-$grey-secondary: #ECECF0;
-$grey-light-primary: #D9D9E0;
-$requireTag-color:#ee5441;
-$new-brand-blue:#2149C1;
-$light-blue:#E9EDF9;
-$revamp-color-one:#F9F5FE;
-$revanpbg-color:#f5f6f8;
-$revamp-color-two:#F7F7F7;
+$grey-secondary: #ececf0;
+$grey-light-primary: #d9d9e0;
+$requireTag-color: #ee5441;
+$new-brand-blue: #2149c1;
+$light-blue: #e9edf9;
+$revamp-color-one: #f9f5fe;
+$revanpbg-color: #f5f6f8;
+$revamp-color-two: #f7f7f7;
 // New Branding colors
-$blue: #1D74FF;
-$violet: #6F10A2;
-$dull-white : #D2D2D2;
+$blue: #1d74ff;
+$violet: #6f10a2;
+$dull-white: #d2d2d2;
 // New Branding colors
-$blue: #1D74FF;
-$violet: #6F10A2;
-$lightBlack:#191919;
-$greyColor:#737373;
-$lightgrey: #4C4C4C;
-$lightBlack2:#24282C;
-$blue-varient2:#3972F6;
-$featuredColor:#9747FF;
-$lightYellow:#FEF9F0;
-$amber:#FBD192;
-$sidebarbgrevamp:#e9e9e9;
-$card-border-light2:#d2d2d2;
+$blue: #1d74ff;
+$violet: #6f10a2;
+$lightBlack: #191919;
+$greyColor: #737373;
+$lightgrey: #4c4c4c;
+$lightBlack2: #24282c;
+$blue-varient2: #3972f6;
+$featuredColor: #9747ff;
+$lightYellow: #fef9f0;
+$amber: #fbd192;
+$sidebarbgrevamp: #e9e9e9;
+$card-border-light2: #d2d2d2;
 /* Font-size */
 $h0-font-size: 3rem !default;
 $h1-font-size: 2.5rem !default;
@@ -186,88 +186,88 @@ $font-semi-bolder: 600 !default;
 $font-bold: 700 !default;
 $font-bolder: 800 !default;
 @mixin sidemenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-radius: 8px;
+  background-color: $white;
+  cursor: pointer;
+  .signinTextNavDrawer {
+    width: 170px;
+    word-break: break-word;
+    color: #191919;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    html[dir="rtl"] & {
+      @include for-size(phone-only) {
+        width: 163px;
+      }
+    }
+  }
+}
+@mixin profileBoxMenu {
+  .menuProfileTabsIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid $revamp-color-one;
+    background: $revamp-color-one;
+    padding: 0px;
+  }
+  .ProfileBox {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background: $revamp-color-two;
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    i {
+      display: flex;
+      color: #737373;
+      font-size: 28px;
+      width: 28px;
+      height: 28px;
+    }
+    .pTag {
+      position: absolute;
+      top: -4px;
+      right: -1px;
+      width: 16px;
+      height: 16px;
+      img {
+        width: 14px;
+      }
+    }
+  }
+  .menuTextIconWrap {
+    display: flex;
     justify-content: space-between;
-    gap: 16px;
-    border-radius: 8px;
-    background-color: $white;
-    cursor: pointer;
-      .signinTextNavDrawer {
-        width: 170px;
-        word-break: break-word;
-        color: #191919;
+    align-items: center;
+    width: 100%;
+    .tabTitle {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $lightBlack;
+    }
+    .tabDesc {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      color: #737373;
+    }
+    span {
+      i {
+        display: block;
+        width: 16px;
+        height: 16px;
         font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        html[dir='rtl'] & {
-            @include for-size(phone-only) {
-                width: 163px;
-            }
-        }
+        color: #737373;
+      }
     }
-}
-@mixin profileBoxMenu{
-    .menuProfileTabsIcon {
-        width: 48px;
-        height: 48px;
-        border-radius: 12px;
-        border: 1px solid $revamp-color-one;
-        background: $revamp-color-one;
-        padding: 0px;
-    }
-    .ProfileBox {
-        width: 48px;
-        height: 48px;
-        border-radius: 100%;
-        background: $revamp-color-two;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-          i{
-            display: flex;
-            color: #737373;
-            font-size: 28px;
-            width: 28px;
-            height: 28px;
-          }
-          .pTag{
-            position: absolute;
-            top: -4px;
-            right: -1px;
-            width: 16px;
-            height: 16px;
-            img{
-                width: 14px;
-              }
-          }
-        }
-    .menuTextIconWrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        .tabTitle {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 24px;
-            color: $lightBlack;
-        }
-        .tabDesc {
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 16px;
-            color: #737373;
-        }
-        span {
-            i {
-                display: block;
-                width: 16px;
-                height: 16px;
-                font-size: 16px;
-                color: #737373;
-            }
-        }
-    }
+  }
 }
