@@ -2,6 +2,7 @@
 
 .headerContainer {
   padding-top: 8px;
+  padding-inline: 8px;
   z-index: 999;
   background: white;
   position: sticky;
@@ -10,6 +11,7 @@
   box-shadow: 0 4px 24px 0 hsla(240, 1%, 82%, 0.12);
 
   @include for-size(phone-only) {
+    padding: 8px;
     box-shadow:
       0 1px 0 0 hsla(270, 6%, 81%, 0.75),
       0 4px 10px 0 hsla(240, 1%, 82%, 0.35);
@@ -20,6 +22,8 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  width: min(100%, 1600px);
+  margin: 0 auto;
   border: 1px solid #e1e4e8;
   border-radius: 10px;
   padding: 8px;
@@ -27,7 +31,18 @@
   align-items: center;
   gap: 24px;
 
+  @include for-size(medium-desktop-down) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "left right"
+      "mid mid";
+    row-gap: 8px;
+    column-gap: 12px;
+  }
+
   @include for-size(phone-only) {
+    display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: unset;
@@ -39,6 +54,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  grid-area: left;
 
   div {
     display: flex;
@@ -66,9 +82,15 @@
   /* Hide on larger screens */
 
   button {
-    background: $primary-bg;
+    background: #f9f5fe;
     border: none;
     padding: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: width 2s ease-in-out;
   }
@@ -78,6 +100,12 @@
     /* Show on smaller screens */
     /* Set cursor to pointer for interaction */
   }
+}
+
+.menuToggleIcon {
+  color: #510c76;
+  display: block;
+  flex-shrink: 0;
 }
 
 .hamBurger {
@@ -107,6 +135,7 @@
 .headerMidWrapper {
   display: flex;
   flex-direction: row;
+  grid-area: mid;
 
   gap: 20px;
 
@@ -114,6 +143,25 @@
   color: $lightgrey;
   font-weight: 500;
   font-size: 16px;
+
+  @include for-size(medium-desktop-down) {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 12px;
+    padding-inline: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -8px;
+      right: -8px;
+      border-top: 1px solid #e1e4e8;
+    }
+  }
 
   @include for-size(phone-only) {
     display: grid;
@@ -171,6 +219,7 @@
   justify-content: flex-end;
   display: flex;
   flex-direction: row;
+  grid-area: right;
   gap: 8px;
   color: $lightgrey;
   font-weight: 500;

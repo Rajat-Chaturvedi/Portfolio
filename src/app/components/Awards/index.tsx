@@ -11,13 +11,17 @@ interface AwardsProps {
 }
 
 const Awards = ({ data }: AwardsProps) => {
+  const validItems = (data || []).filter((item) => item?.title?.trim());
+
+  if (!validItems.length) return null;
+
   return (
     <div className={styles.masterContainer} id="awards">
       <div className={styles.subContainer}>
         <h2>Awards</h2>
 
         <ul className={styles.listContainer}>
-          {data.map((item) => (
+          {validItems.map((item) => (
             <li key={item.id}>{item.title}</li>
           ))}
         </ul>

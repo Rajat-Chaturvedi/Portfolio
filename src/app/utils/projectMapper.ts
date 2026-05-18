@@ -2,9 +2,7 @@ export function mapProjects(strapiData: any[]) {
   return strapiData.map((item) => {
     const attributes = item.attributes ?? item;
 
-    const imageUrl = attributes.image?.url
-      ? `${attributes.image.url}`
-      : "";
+    const imageUrl = attributes.image?.url ? `${attributes.image.url}` : "";
 
     return {
       id: item.id,

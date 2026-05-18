@@ -17,7 +17,21 @@ interface ExperienceBullet {
 }
 
 const Experience = ({ data }: { data: ExperienceItem[] }) => {
-  if (!data || data.length === 0) return null;
+  const validItems = (data || [])
+    .map((item) => ({
+      ...item,
+      bullets: (item?.bullets || []).filter((bullet) => bullet?.point?.trim()),
+    }))
+    .filter(
+      (item) =>
+        item?.title?.trim() &&
+        item?.company?.trim() &&
+        item?.startDate?.trim() &&
+        item?.endDate?.trim() &&
+        item?.bullets?.length,
+    );
+
+  if (!validItems.length) return null;
 
   return (
     <>
@@ -25,7 +39,7 @@ const Experience = ({ data }: { data: ExperienceItem[] }) => {
         <h2 className={styles.heading}>Experience</h2>
 
         <div className={styles.cardWrapper}>
-          {data.map((item) => (
+          {validItems.map((item) => (
             <div key={item.id} className={styles.cardContainer}>
               <div className={styles.imgContainer}>
                 {item.logo && (

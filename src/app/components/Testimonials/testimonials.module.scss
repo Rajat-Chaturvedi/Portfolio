@@ -1,0 +1,60 @@
+@import "../../styles/globalVariables";
+
+.section {
+  background: #f9f5fe;
+  padding: 24px 12px;
+}
+
+.container {
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #1d252d;
+    margin: 0 0 16px;
+
+    @include for-size(phone-only) {
+      font-size: 24px;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+
+  @include for-size(tablet-phone) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include for-size(phone-only) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border-radius: 12px;
+  border: 1px solid #dfd0f4;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.quote {
+  margin: 0;
+  color: #36434e;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.author {
+  margin: 12px 0 4px;
+  color: #1d252d;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.meta {
+  margin: 0;
+  color: #6f10a2;
+  font-size: 13px;
+}

@@ -16,7 +16,12 @@ interface ProjectsProps {
 }
 
 const Projects = ({ projects }: ProjectsProps) => {
-  if (!projects?.length) return null;
+  const validProjects = (projects || []).filter(
+    (item) =>
+      item?.name?.trim() && item?.description?.trim() && item?.link?.trim(),
+  );
+
+  if (!validProjects.length) return null;
 
   return (
     <section className={styles.mainContainer} id="projects">
@@ -24,7 +29,7 @@ const Projects = ({ projects }: ProjectsProps) => {
         <h2>Projects</h2>
 
         <div className={styles.Wrapper}>
-          {projects.map((item) => (
+          {validProjects.map((item) => (
             <Project key={item.id} item={item} />
           ))}
         </div>

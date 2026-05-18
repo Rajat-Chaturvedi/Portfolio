@@ -1,0 +1,49 @@
+@import "../../styles/globalVariables";
+
+.section {
+  background: linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
+  padding: 24px 12px;
+}
+
+.container {
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #1d252d;
+    margin: 0 0 16px;
+
+    @include for-size(phone-only) {
+      font-size: 24px;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  @include for-size(phone-only) {
+    grid-template-columns: 1fr;
+  }
+
+  article {
+    border-radius: 12px;
+    border: 1px solid #d9d9e0;
+    background: #ffffff;
+    padding: 16px;
+
+    h3 {
+      margin: 0 0 8px;
+      color: #1d252d;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0;
+      color: #4c4c4c;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+  }
+}

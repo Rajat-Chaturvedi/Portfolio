@@ -8,7 +8,14 @@ interface SkillsProps {
 }
 
 const Skills: React.FC<SkillsProps> = ({ data }) => {
-  if (!data?.length) return null;
+  const validItems = (data || [])
+    .map((item) => ({
+      ...item,
+      types: (item?.types || []).filter((type) => type?.subType?.trim()),
+    }))
+    .filter((item) => item?.name?.trim() && item?.types?.length);
+
+  if (!validItems.length) return null;
 
   return (
     <div className={styles.mainContainer} id="skills">
@@ -16,7 +23,7 @@ const Skills: React.FC<SkillsProps> = ({ data }) => {
 
       <div className={styles.subContainer}>
         <div className={styles.Wrapper}>
-          {data.map((item) => (
+          {validItems.map((item) => (
             <Skill key={item.id} item={item} />
           ))}
         </div>

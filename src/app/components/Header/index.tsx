@@ -41,31 +41,13 @@ function Header({ links }: HeaderProps) {
                 <HamBurger
                   height={18}
                   width={24}
-                  style={{
-                    color: "#510c76",
-                    background: "#f9f5fe",
-                    // border: "1px solid #510c76",
-                    borderRadius: "8px",
-                    padding: "8px",
-                    fontWeight: "500",
-                    fontSize: "16px",
-                    marginTop: "4px",
-                  }}
+                  className={styles.menuToggleIcon}
                 />
               ) : (
                 <Close
                   height={18}
                   width={20}
-                  style={{
-                    color: "#510c76",
-                    background: "#f9f5fe",
-                    // border: "1px solid #510c76",
-                    borderRadius: "50%",
-                    padding: "8px",
-                    fontWeight: "500",
-                    fontSize: "16px",
-                    marginTop: "4px",
-                  }}
+                  className={styles.menuToggleIcon}
                 />
               )}
             </button>
@@ -82,8 +64,20 @@ function Header({ links }: HeaderProps) {
           <Link href="#skills" passHref className={styles.navLink}>
             Skills
           </Link>
+          <Link href="#case-studies" passHref className={styles.navLink}>
+            Case Studies
+          </Link>
           <Link href="#projects" passHref className={styles.navLink}>
             Projects
+          </Link>
+          <Link href="#testimonials" passHref className={styles.navLink}>
+            Testimonials
+          </Link>
+          <Link href="#now" passHref className={styles.navLink}>
+            Now
+          </Link>
+          <Link href="#writing" passHref className={styles.navLink}>
+            Writing
           </Link>
           <Link href="#awards" passHref className={styles.navLink}>
             Awards
@@ -94,11 +88,7 @@ function Header({ links }: HeaderProps) {
         </div>
         {/* Right Part */}
         <div className={styles.headerRightWrapper}>
-          <Link
-            target="_blank"
-            href={links.linkedin}
-            passHref
-          >
+          <Link target="_blank" href={links.linkedin} passHref>
             <button className={styles.buttonLinkedIn}>
               <span>
                 <LinkedIn width={32} height={22} />
@@ -106,11 +96,7 @@ function Header({ links }: HeaderProps) {
               </span>
             </button>
           </Link>
-          <Link
-            target="_blank"
-            href={links.github}
-            passHref
-          >
+          <Link target="_blank" href={links.github} passHref>
             <button className={styles.buttonGitHub}>
               <span>
                 <Github width={32} height={22} />
@@ -118,11 +104,7 @@ function Header({ links }: HeaderProps) {
               </span>
             </button>
           </Link>
-          <Link
-            target="_blank"
-            href={links.resume}
-            passHref
-          >
+          <Link target="_blank" href={links.resume} passHref>
             <button className={styles.buttonCV}>
               <span>
                 <CV style={{ color: "#4c4c4c" }} width={32} height={22} />
@@ -146,8 +128,20 @@ function Header({ links }: HeaderProps) {
               <Link href="#skills" passHref className={styles.navLink}>
                 Skills
               </Link>
+              <Link href="#case-studies" passHref className={styles.navLink}>
+                Case Studies
+              </Link>
               <Link href="#projects" passHref className={styles.navLink}>
                 Projects
+              </Link>
+              <Link href="#testimonials" passHref className={styles.navLink}>
+                Testimonials
+              </Link>
+              <Link href="#now" passHref className={styles.navLink}>
+                Now
+              </Link>
+              <Link href="#writing" passHref className={styles.navLink}>
+                Writing
               </Link>
               <Link href="#awards" passHref className={styles.navLink}>
                 Awards
@@ -159,11 +153,7 @@ function Header({ links }: HeaderProps) {
             {/* 2nd Part */}
             <div className={styles.headerRightWrapper}>
               <button className={styles.buttonLinkedIn}>
-                <Link
-                  target="_blank"
-                  href={links.linkedin}
-                  passHref
-                >
+                <Link target="_blank" href={links.linkedin} passHref>
                   <span>
                     <LinkedIn className={styles.icon} />
                     <span className={styles.btnText}>LinkedIn</span>
@@ -171,11 +161,7 @@ function Header({ links }: HeaderProps) {
                 </Link>
               </button>
               <button className={styles.buttonGitHub}>
-                <Link
-                  target="_blank"
-                  href={links.github}
-                  passHref
-                >
+                <Link target="_blank" href={links.github} passHref>
                   <span>
                     <Github className={styles.icon} />
                     <span className={styles.btnText}>GitHub</span>
@@ -183,11 +169,7 @@ function Header({ links }: HeaderProps) {
                 </Link>
               </button>
               <button className={styles.buttonCV}>
-                <Link
-                  target="_blank"
-                  href={links.resume}
-                  passHref
-                >
+                <Link target="_blank" href={links.resume} passHref>
                   <span>
                     <CV style={{ color: "#4c4c4c" }} className={styles.icon} />
                     <span className={styles.btnText}>Resume</span>

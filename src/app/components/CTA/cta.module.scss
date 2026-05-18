@@ -1,0 +1,54 @@
+@import "../../styles/globalVariables";
+
+.section {
+  background: linear-gradient(135deg, #6f10a2 0%, #3f2f96 100%);
+  padding: 28px 12px;
+}
+
+.container {
+  text-align: center;
+  color: #ffffff;
+
+  h2 {
+    margin: 0;
+    font-size: 34px;
+
+    @include for-size(phone-only) {
+      font-size: 24px;
+    }
+  }
+
+  p {
+    margin: 10px 0 18px;
+    font-size: 16px;
+    color: #efe7ff;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+
+  a {
+    border-radius: 8px;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  a:nth-child(1) {
+    background: #ffffff;
+    color: #3f2f96;
+  }
+
+  a:nth-child(2),
+  a:nth-child(3) {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+}
