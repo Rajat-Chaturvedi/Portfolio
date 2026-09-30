@@ -64,7 +64,7 @@ export const UI_CONTENT = {
     fallbackLinks: {
       github: "https://github.com/Rajat-Chaturvedi",
       linkedin: "https://www.linkedin.com/in/rajat-chaturvedi-dev",
-      resume: "https://drive.google.com/file/d/144BvkzYWkgwLh_f0H06EHbIoIq-2wBzl/view?usp=sharing",
+      resume: "https://drive.google.com/file/d/1e6DBbFVqU1U2_ZAqaSxWmLPoHe4Y9sXQ/view?usp=sharing",
     },
     maintenanceNav: [{ href: `mailto:${SITE_CONTENT.email}`, label: "Contact" }],
     nav: [
