@@ -49,6 +49,12 @@
   }
 }
 
+.maintenanceHeader .headerSubContainer {
+  @include for-size(medium-desktop-down) {
+    grid-template-areas: "left right";
+  }
+}
+
 .headerLeftWrapper {
   display: flex;
   flex-direction: row;

@@ -6,9 +6,7 @@ export default function Maintenance() {
   return (
     <main className={styles.maintenance}>
       <div className={styles.maintenanceContent}>
-        <span className={styles.maintenanceLabel}>
-          {content.label}
-        </span>
+        <span className={styles.maintenanceLabel}>{content.label}</span>
         <h1>{content.title}</h1>
         <p>{content.message}</p>
         <a href={`mailto:${SITE_CONTENT.email}`}>

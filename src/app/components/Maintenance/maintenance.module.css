@@ -1,5 +1,5 @@
 .maintenance {
-  min-height: 100svh;
+  min-height: calc(100svh - 74px);
   display: flex;
   align-items: center;
   padding: clamp(5rem, 12vw, 9rem) max(24px, calc((100vw - 1120px) / 2));

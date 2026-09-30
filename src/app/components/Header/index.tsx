@@ -12,17 +12,19 @@ interface HeaderProps {
     linkedin: string;
     resume: string;
   };
+  maintenance?: boolean;
 }
 
-function Header({ links }: HeaderProps) {
+function Header({ links, maintenance = false }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const nav = maintenance ? UI_CONTENT.header.maintenanceNav : UI_CONTENT.header.nav;
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className={styles.headerContainer}>
+    <header className={`${styles.headerContainer} ${maintenance ? styles.maintenanceHeader : ""}`}>
       <div className={styles.headerSubContainer}>
         {/* Left Part */}
         <div className={styles.headerLeftWrapper}>
@@ -55,13 +57,15 @@ function Header({ links }: HeaderProps) {
           </div>
         </div>
         {/* Mid Part */}
-        <div className={styles.headerMidWrapper}>
-          {UI_CONTENT.header.nav.map(({ href, label }) => (
-            <Link key={href} href={href} passHref className={styles.navLink}>
-              {label}
-            </Link>
-          ))}
-        </div>
+        {!maintenance && (
+          <div className={styles.headerMidWrapper}>
+            {nav.map(({ href, label }) => (
+              <Link key={href} href={href} passHref className={styles.navLink}>
+                {label}
+              </Link>
+            ))}
+          </div>
+        )}
         {/* Right Part */}
         <div className={styles.headerRightWrapper}>
           <Link target="_blank" href={links.linkedin} passHref>
@@ -95,7 +99,7 @@ function Header({ links }: HeaderProps) {
           <div className={styles.mobileMenuWrapper}>
             {/* 1st Part */}
             <div className={styles.headerMidWrapper}>
-              {UI_CONTENT.header.nav.map(({ href, label }) => (
+              {nav.map(({ href, label }) => (
                 <Link key={href} href={href} passHref className={styles.navLink}>
                   {label}
                 </Link>
