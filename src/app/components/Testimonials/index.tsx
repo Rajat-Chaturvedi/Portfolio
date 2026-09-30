@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./testimonials.module.scss";
+import { UI_CONTENT } from "../../constants";
 
 interface Testimonial {
   id: number;
@@ -19,7 +20,7 @@ const Testimonials = ({ data }: { data: Testimonial[] }) => {
   return (
     <section className={styles.section} id="testimonials">
       <div className={styles.container}>
-        <h2>Testimonials</h2>
+        <h2>{UI_CONTENT.headings.testimonials}</h2>
         <div className={styles.grid}>
           {validItems.map((item) => (
             <article key={item.id} className={styles.card}>

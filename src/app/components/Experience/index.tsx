@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./experience.module.scss";
+import { UI_CONTENT } from "../../constants";
 
 interface ExperienceItem {
   id: number;
@@ -36,7 +37,7 @@ const Experience = ({ data }: { data: ExperienceItem[] }) => {
   return (
     <>
       <div className={styles.container} id="experience">
-        <h2 className={styles.heading}>Experience</h2>
+        <h2 className={styles.heading}>{UI_CONTENT.headings.experience}</h2>
 
         <div className={styles.cardWrapper}>
           {validItems.map((item) => (
@@ -52,7 +53,7 @@ const Experience = ({ data }: { data: ExperienceItem[] }) => {
               </div>
 
               <h4 className={styles.title}>
-                {item.title} at {item.company}
+                {item.title} {UI_CONTENT.experience.companyJoiner} {item.company}
               </h4>
               <h5>{`${item?.startDate} - ${item?.endDate}`}</h5>
               <ul className={styles.bullets}>

@@ -3,12 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import HeaderServer from "./components/Header/HeaderServer";
 import WhatsAppWidget from "./components/Whatsapp/WhatsAppWidget";
+import { SITE_CONTENT } from "./constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rajat Chaturvedi | FullStack Developer",
-  description: "A master was once a beginner ...",
+  title: SITE_CONTENT.title,
+  description: SITE_CONTENT.description,
 };
 
 export default function RootLayout({
@@ -21,7 +22,7 @@ export default function RootLayout({
         {children}
 
         {/* WhatsApp Floating Widget */}
-        <WhatsAppWidget phoneNumber="918979966510" />
+        <WhatsAppWidget phoneNumber={SITE_CONTENT.whatsappNumber} />
       </body>
     </html>
   );

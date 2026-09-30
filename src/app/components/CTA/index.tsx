@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./cta.module.scss";
+import { UI_CONTENT } from "../../constants";
 
 interface CTAData {
   headline: string;
@@ -29,21 +30,21 @@ const CTA = ({ data }: { data: CTAData }) => {
         {data.subheadline?.trim() ? <p>{data.subheadline}</p> : null}
         <div className={styles.actions}>
           {data.email?.trim() ? (
-            <Link href={`mailto:${data.email}`}>Email Me</Link>
+            <Link href={`mailto:${data.email}`}>{UI_CONTENT.cta.email}</Link>
           ) : null}
           {data.resumeUrl?.trim() ? (
             <Link href={data.resumeUrl} target="_blank">
-              View Resume
+              {UI_CONTENT.cta.resume}
             </Link>
           ) : null}
           {data.calendarUrl?.trim() ? (
             <Link href={data.calendarUrl} target="_blank">
-              Book a Call
+              {UI_CONTENT.cta.calendar}
             </Link>
           ) : null}
           {data.allSlotsUrl?.trim() && data.allSlotsUrl !== data.calendarUrl ? (
             <Link href={data.allSlotsUrl} target="_blank">
-              View all slots
+              {UI_CONTENT.cta.slots}
             </Link>
           ) : null}
         </div>

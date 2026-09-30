@@ -2,6 +2,7 @@ import React from "react";
 import Skill from "../Skill";
 import styles from "./skills.module.scss";
 import { SkillItem } from "@/app/utils/skillMapper";
+import { UI_CONTENT } from "../../constants";
 
 interface SkillsProps {
   data: SkillItem[];
@@ -19,7 +20,7 @@ const Skills: React.FC<SkillsProps> = ({ data }) => {
 
   return (
     <div className={styles.mainContainer} id="skills">
-      <h2 className={styles.heading}>Skills</h2>
+      <h2 className={styles.heading}>{UI_CONTENT.headings.skills}</h2>
 
       <div className={styles.subContainer}>
         <div className={styles.Wrapper}>

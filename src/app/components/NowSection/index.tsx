@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./nowSection.module.scss";
+import { UI_CONTENT } from "../../constants";
 
 interface NowContent {
   title: string;
@@ -21,10 +22,10 @@ const NowSection = ({ data }: { data: NowContent }) => {
   if (!hasContent) return null;
 
   const cards = [
-    { title: "Current Focus", value: data.focus },
-    { title: "Learning", value: data.learning },
-    { title: "Building", value: data.building },
-    { title: "Availability", value: data.availability },
+    { title: UI_CONTENT.now.focus, value: data.focus },
+    { title: UI_CONTENT.now.learning, value: data.learning },
+    { title: UI_CONTENT.now.building, value: data.building },
+    { title: UI_CONTENT.now.availability, value: data.availability },
   ].filter((card) => card.value?.trim());
 
   return (

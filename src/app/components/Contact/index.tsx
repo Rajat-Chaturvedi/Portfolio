@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./contact.module.scss";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { SITE_CONTENT, UI_CONTENT } from "../../constants";
 
 // Define the interface for form data
 interface FormData {
@@ -17,13 +18,13 @@ const Contact = () => {
 
   // Define the onSubmit function with the correct type
   const onSubmit: SubmitHandler<FormData> = (formData) => {
-    window.location.href = `mailto:chaturvedirajat36@gmail.com?subject=${formData.subject}&body=${formData.message},(${formData.email})`;
+    window.location.href = `mailto:${SITE_CONTENT.email}?subject=${formData.subject}&body=${formData.message},(${formData.email})`;
   };
 
   return (
     <section className={styles.mainContainer} id="contact">
       <div>
-        <h2>Contact</h2>
+        <h2>{UI_CONTENT.contact.title}</h2>
         <div className={styles.Wrapper}>
           <div className={styles.formContainer}>
             <form
@@ -31,33 +32,33 @@ const Contact = () => {
               className={styles.contactForm}
             >
               <div>
-                <h4>Connect for any query</h4>
-                <h5>To get revert from Rajat</h5>
+                <h4>{UI_CONTENT.contact.prompt}</h4>
+                <h5>{UI_CONTENT.contact.response}</h5>
               </div>
               <div className={styles.inputContainers}>
-                <label>Name</label>
+                <label>{UI_CONTENT.contact.name}</label>
                 <input
                   {...register("name")}
-                  placeholder="Name"
+                  placeholder={UI_CONTENT.contact.name}
                   type="text"
                   className=""
                 />
               </div>
 
               <div className={styles.inputContainers}>
-                <label>Email</label>
+                <label>{UI_CONTENT.contact.email}</label>
                 <input
                   {...register("email")}
-                  placeholder="Email"
+                  placeholder={UI_CONTENT.contact.email}
                   type="email"
                   className=""
                 />
               </div>
 
               <div className={styles.inputContainers}>
-                <label>Subject</label>
+                <label>{UI_CONTENT.contact.subject}</label>
                 <input
-                  placeholder="Subject"
+                  placeholder={UI_CONTENT.contact.subject}
                   {...register("subject")}
                   className=""
                   type="text"
@@ -65,17 +66,17 @@ const Contact = () => {
               </div>
 
               <div className={styles.inputContainers}>
-                <label>Message</label>
+                <label>{UI_CONTENT.contact.message}</label>
                 <textarea
                   {...register("message")}
-                  placeholder="Message"
+                  placeholder={UI_CONTENT.contact.message}
                   className=""
                 ></textarea>
               </div>
 
               <div>
                 <button type="submit" className={styles.submitBtn}>
-                  Submit
+                  {UI_CONTENT.contact.submit}
                 </button>
               </div>
             </form>

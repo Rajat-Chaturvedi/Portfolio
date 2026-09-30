@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./projects.module.scss";
 import Project from "../Project";
+import { UI_CONTENT } from "../../constants";
 
 type ProjectType = {
   id: number;
@@ -26,7 +27,7 @@ const Projects = ({ projects }: ProjectsProps) => {
   return (
     <section className={styles.mainContainer} id="projects">
       <div className={styles.contentContainer}>
-        <h2>Projects</h2>
+        <h2>{UI_CONTENT.headings.projects}</h2>
 
         <div className={styles.Wrapper}>
           {validProjects.map((item) => (

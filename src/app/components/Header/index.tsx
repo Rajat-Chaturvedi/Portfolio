@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "./header.module.scss";
 import Link from "next/link";
 import { CV, Close, Github, HamBurger, LinkedIn } from "../svgs";
+import { UI_CONTENT } from "../../constants";
 
 interface HeaderProps {
   links: {
@@ -28,11 +29,11 @@ function Header({ links }: HeaderProps) {
           <div>
             <Link href="#" passHref className={styles.logo}>
               {/* <a className={styles.logo}> */}
-              <span>RC</span>
+              <span>{UI_CONTENT.header.initials}</span>
               {/* </a> */}
             </Link>
             <span className={styles.firstName}>
-              Rajat <span className={styles.lastName}>Chaturvedi</span>
+              {UI_CONTENT.header.firstName} <span className={styles.lastName}>{UI_CONTENT.header.lastName}</span>
             </span>
           </div>
           <div className={styles.hamBurgerMenu}>
@@ -55,36 +56,11 @@ function Header({ links }: HeaderProps) {
         </div>
         {/* Mid Part */}
         <div className={styles.headerMidWrapper}>
-          <Link href="#about" passHref className={styles.navLink}>
-            About
-          </Link>
-          <Link href="#experience" passHref className={styles.navLink}>
-            Works
-          </Link>
-          <Link href="#skills" passHref className={styles.navLink}>
-            Skills
-          </Link>
-          <Link href="#case-studies" passHref className={styles.navLink}>
-            Case Studies
-          </Link>
-          <Link href="#projects" passHref className={styles.navLink}>
-            Projects
-          </Link>
-          <Link href="#testimonials" passHref className={styles.navLink}>
-            Testimonials
-          </Link>
-          <Link href="#now" passHref className={styles.navLink}>
-            Now
-          </Link>
-          <Link href="#writing" passHref className={styles.navLink}>
-            Writing
-          </Link>
-          <Link href="#awards" passHref className={styles.navLink}>
-            Awards
-          </Link>
-          <Link href="#contact" passHref className={styles.navLink}>
-            Contact
-          </Link>
+          {UI_CONTENT.header.nav.map(({ href, label }) => (
+            <Link key={href} href={href} passHref className={styles.navLink}>
+              {label}
+            </Link>
+          ))}
         </div>
         {/* Right Part */}
         <div className={styles.headerRightWrapper}>
@@ -92,7 +68,7 @@ function Header({ links }: HeaderProps) {
             <button className={styles.buttonLinkedIn}>
               <span>
                 <LinkedIn width={32} height={22} />
-                <span className={styles.btnText}>LinkedIn</span>
+                <span className={styles.btnText}>{UI_CONTENT.header.linkedin}</span>
               </span>
             </button>
           </Link>
@@ -100,7 +76,7 @@ function Header({ links }: HeaderProps) {
             <button className={styles.buttonGitHub}>
               <span>
                 <Github width={32} height={22} />
-                <span className={styles.btnText}>GitHub</span>
+                <span className={styles.btnText}>{UI_CONTENT.header.github}</span>
               </span>
             </button>
           </Link>
@@ -108,7 +84,7 @@ function Header({ links }: HeaderProps) {
             <button className={styles.buttonCV}>
               <span>
                 <CV style={{ color: "#4c4c4c" }} width={32} height={22} />
-                <span className={styles.btnText}>Resume</span>
+                <span className={styles.btnText}>{UI_CONTENT.header.resume}</span>
               </span>
             </button>
           </Link>
@@ -119,36 +95,11 @@ function Header({ links }: HeaderProps) {
           <div className={styles.mobileMenuWrapper}>
             {/* 1st Part */}
             <div className={styles.headerMidWrapper}>
-              <Link href="#about" passHref className={styles.navLink}>
-                About
-              </Link>
-              <Link href="#experience" passHref className={styles.navLink}>
-                Works
-              </Link>
-              <Link href="#skills" passHref className={styles.navLink}>
-                Skills
-              </Link>
-              <Link href="#case-studies" passHref className={styles.navLink}>
-                Case Studies
-              </Link>
-              <Link href="#projects" passHref className={styles.navLink}>
-                Projects
-              </Link>
-              <Link href="#testimonials" passHref className={styles.navLink}>
-                Testimonials
-              </Link>
-              <Link href="#now" passHref className={styles.navLink}>
-                Now
-              </Link>
-              <Link href="#writing" passHref className={styles.navLink}>
-                Writing
-              </Link>
-              <Link href="#awards" passHref className={styles.navLink}>
-                Awards
-              </Link>
-              <Link href="#contact" passHref className={styles.navLink}>
-                Contact
-              </Link>
+              {UI_CONTENT.header.nav.map(({ href, label }) => (
+                <Link key={href} href={href} passHref className={styles.navLink}>
+                  {label}
+                </Link>
+              ))}
             </div>
             {/* 2nd Part */}
             <div className={styles.headerRightWrapper}>
@@ -156,7 +107,7 @@ function Header({ links }: HeaderProps) {
                 <Link target="_blank" href={links.linkedin} passHref>
                   <span>
                     <LinkedIn className={styles.icon} />
-                    <span className={styles.btnText}>LinkedIn</span>
+                    <span className={styles.btnText}>{UI_CONTENT.header.linkedin}</span>
                   </span>
                 </Link>
               </button>
@@ -164,7 +115,7 @@ function Header({ links }: HeaderProps) {
                 <Link target="_blank" href={links.github} passHref>
                   <span>
                     <Github className={styles.icon} />
-                    <span className={styles.btnText}>GitHub</span>
+                    <span className={styles.btnText}>{UI_CONTENT.header.github}</span>
                   </span>
                 </Link>
               </button>
@@ -172,7 +123,7 @@ function Header({ links }: HeaderProps) {
                 <Link target="_blank" href={links.resume} passHref>
                   <span>
                     <CV style={{ color: "#4c4c4c" }} className={styles.icon} />
-                    <span className={styles.btnText}>Resume</span>
+                    <span className={styles.btnText}>{UI_CONTENT.header.resume}</span>
                   </span>
                 </Link>
               </button>

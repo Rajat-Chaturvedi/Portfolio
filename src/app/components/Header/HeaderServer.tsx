@@ -3,7 +3,7 @@ import { getAbout } from "@/app/utils/api/about";
 import Header from ".";
 
 export default async function HeaderServer() {
-  const about = await getAbout();
+  const about = await getAbout().catch(() => null);
 
   if (!about) return null;
 

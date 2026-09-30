@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./WhatsAppWidget.module.scss";
+import { UI_CONTENT } from "../../constants";
 
 type WhatsAppWidgetProps = {
   phoneNumber: string;
@@ -9,7 +10,7 @@ type WhatsAppWidgetProps = {
 
 export default function WhatsAppWidget({
   phoneNumber,
-  defaultMessage = "Hello! I want to connect regarding fulltime opportunity / freelance.",
+  defaultMessage = UI_CONTENT.whatsapp.message,
 }: WhatsAppWidgetProps) {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     defaultMessage
@@ -21,7 +22,7 @@ export default function WhatsAppWidget({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp"
+        aria-label={UI_CONTENT.whatsapp.label}
         className={styles.button}
       >
         <svg
@@ -36,7 +37,7 @@ export default function WhatsAppWidget({
           />
         </svg>
 
-        <span className={styles.text}>Chat on WhatsApp</span>
+        <span className={styles.text}>{UI_CONTENT.whatsapp.label}</span>
       </a>
     </div>
   );

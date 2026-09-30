@@ -6,6 +6,7 @@ export async function fetchStrapi(
 ) {
   const res = await fetch(`${STRAPI_URL}${endpoint}`, {
     next: { revalidate: 60 }, // ISR (safe for portfolio)
+    signal: AbortSignal.timeout(5000),
     headers: {
       "Content-Type": "application/json",
     },

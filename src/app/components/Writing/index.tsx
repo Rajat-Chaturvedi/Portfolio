@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./writing.module.scss";
+import { UI_CONTENT } from "../../constants";
 
 interface WritingItem {
   id: number;
@@ -19,7 +20,7 @@ const Writing = ({ data }: { data: WritingItem[] }) => {
   return (
     <section className={styles.section} id="writing">
       <div className={styles.container}>
-        <h2>Writing and Notes</h2>
+        <h2>{UI_CONTENT.headings.writing}</h2>
         <div className={styles.grid}>
           {validItems.map((item) => (
             <article key={item.id} className={styles.card}>
@@ -27,7 +28,7 @@ const Writing = ({ data }: { data: WritingItem[] }) => {
               <p>{item.summary}</p>
               {item.url?.trim() ? (
                 <Link href={item.url} target="_blank">
-                  Read article
+                  {UI_CONTENT.writing.readArticle}
                 </Link>
               ) : null}
             </article>

@@ -3,6 +3,7 @@ import styles from "./project.module.scss";
 import { Arrow } from "../svgs";
 import Link from "next/link";
 import Image from "next/image";
+import { UI_CONTENT } from "../../constants";
 
 interface ProjectProps {
   item: {
@@ -46,7 +47,7 @@ const Project: React.FC<ProjectProps> = ({ item }) => {
         <p className={styles.description}>{item.description}</p>
 
         <p className={styles.techStack}>
-          <span className={styles.techStackTitle}>Stack :</span>
+          <span className={styles.techStackTitle}>{UI_CONTENT.project.stack}</span>
           {item.techStack.map((tech, index) => (
             <span key={index} className={styles.techStackName}>
               #{tech}

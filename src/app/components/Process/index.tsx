@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./process.module.scss";
+import { UI_CONTENT } from "../../constants";
 
 interface ProcessItem {
   id: number;
@@ -19,7 +20,7 @@ const Process = ({ data }: { data: ProcessItem[] }) => {
   return (
     <section className={styles.section} id="process">
       <div className={styles.container}>
-        <h2>How I Build</h2>
+        <h2>{UI_CONTENT.headings.process}</h2>
         <div className={styles.grid}>
           {validItems.map((item) => (
             <article key={item.id} className={styles.card}>

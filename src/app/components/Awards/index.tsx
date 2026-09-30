@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./awards.module.scss";
+import { UI_CONTENT } from "../../constants";
 
 interface Award {
   id: number;
@@ -18,7 +19,7 @@ const Awards = ({ data }: AwardsProps) => {
   return (
     <div className={styles.masterContainer} id="awards">
       <div className={styles.subContainer}>
-        <h2>Awards</h2>
+        <h2>{UI_CONTENT.headings.awards}</h2>
 
         <ul className={styles.listContainer}>
           {validItems.map((item) => (

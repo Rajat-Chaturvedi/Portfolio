@@ -6,6 +6,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Lottie from "lottie-web";
 import { Call, Reading } from "../svgs";
 import Link from "next/link";
+import { UI_CONTENT } from "../../constants";
 
 interface AboutProps {
   data: {
@@ -24,7 +25,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
   // ✅ SAFE FALLBACKS (important)
   const typewriterWords = data?.typewriterTexts?.length
     ? data.typewriterTexts
-    : ["Hi, I am Rajat Chaturvedi."];
+    : [UI_CONTENT.about.typewriterFallback];
 
   const [text] = useTypewriter({
     words: typewriterWords,
@@ -54,7 +55,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
   if (!data) {
     return (
       <section className={styles.section1} id="about">
-        <p>Loading...</p>
+        <p>{UI_CONTENT.about.loading}</p>
       </section>
     );
   }
@@ -79,21 +80,21 @@ const About: React.FC<AboutProps> = ({ data }) => {
                   <button className={styles.btnLearn}>
                     <Link target="_blank" href={data.resumeUrl} passHref>
                       <span>
-                        <Reading width={24} height={24} /> Learn More{" "}
+                        <Reading width={24} height={24} /> {UI_CONTENT.about.learnMore}{" "}
                       </span>
                     </Link>
                   </button>
                 )}
 
                 <button className={styles.btnContact}>
-                  <Link href="#contact" passHref>
+                  <Link href={UI_CONTENT.about.contactHref} passHref>
                     <span>
                       <Call
                         style={{ color: "#6f10a2" }}
                         width={32}
                         height={24}
                       />
-                      Contact Me
+                      {UI_CONTENT.about.contactMe}
                     </span>
                   </Link>
                 </button>

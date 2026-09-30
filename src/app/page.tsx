@@ -24,24 +24,47 @@ import { getProcesses } from "./utils/api/processes";
 import { getTestimonials } from "./utils/api/testimonials";
 import { getWritings } from "./utils/api/writings";
 import { getCaseStudies } from "./utils/api/caseStudies";
+import Maintenance from "./components/Maintenance";
+
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const projects = await getProjects();
-  const about = await getAbout();
-  if (!about) {
-    // You can also throw or render a fallback layout
-    return null;
+  let content;
+  try {
+    content = await Promise.all([
+      getProjects(),
+      getAbout(),
+      getExperiences(),
+      getAwards(),
+      getSkills(),
+      getImpactMetrics(),
+      getProcesses(),
+      getCaseStudies(),
+      getTestimonials(),
+      getNow(),
+      getWritings(),
+      getCTAs(),
+    ]);
+  } catch (error) {
+    console.error("Portfolio content unavailable:", error);
+    return <Maintenance />;
   }
-  const experiences = await getExperiences();
-  const awards = await getAwards();
-  const skills = await getSkills();
-  const impactMetrics = await getImpactMetrics();
-  const processData = await getProcesses();
-  const caseStudies = await getCaseStudies();
-  const testimonials = await getTestimonials();
-  const nowData = await getNow();
-  const writing = await getWritings();
-  const ctaData = await getCTAs();
+
+  const [
+    projects,
+    about,
+    experiences,
+    awards,
+    skills,
+    impactMetrics,
+    processData,
+    caseStudies,
+    testimonials,
+    nowData,
+    writing,
+    ctaData,
+  ] = content;
+  if (!about) return <Maintenance />;
 
   return (
     <main className="">
