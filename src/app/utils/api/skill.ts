@@ -1,11 +1,10 @@
 import { mapSkills } from "../skillMapper";
+import { fetchStrapi } from "../strapi";
 
 export async function getSkills() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/skills?populate[types][populate]=icon&sort=order:asc`,
-    { cache: "no-store" },
+  const json = await fetchStrapi(
+    "/api/skills?populate[types][populate]=icon&sort=order:asc",
+    { cache: "no-store", next: { revalidate: 0 } },
   );
-
-  const json = await res.json();
   return mapSkills(json.data);
 }

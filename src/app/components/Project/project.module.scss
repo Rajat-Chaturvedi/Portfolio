@@ -6,6 +6,9 @@
 
 .contentContainer {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
     background-color: $primary-bg;
     border-radius: 8px;
     border: 1px solid #e1e4e8;
@@ -24,60 +27,45 @@
 
 .imgContainer {
     width: 100%;
-    height: auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f7f7f7;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
 
     img {
+        display: block;
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
     }
 }
 
-.arrowWrapper{
+.externalLink {
     position: absolute;
-    top: 40px;
-    right:20px;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    background: $primary-bg;
+    color: #36434e;
+    text-decoration: none;
 
-    a{
-        color:'#4c4c4c';
-        background-color: '#4c4c4c';
-        text-decoration: none;
-
-        &:hover{text-decoration: none;}
+    &:hover {
+        color: #035739;
+        border-color: #048558;
     }
 
-    span{
-        position: relative;
-        border:1px solid #e1e4e8;
-        border-radius: 50%;
-        padding: 16px 14px 10px;
-        background: $primary-bg;
-
-        &:hover{
-            // border:1px solid $secondary-color;  
-            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1)
-        }
-
-        svg{top: 8px;}
-
-        @include for-size(phone-only){
-            padding: 12px 10px 8px;
-        }
+    &:focus-visible {
+        outline: 2px solid #048558;
+        outline-offset: 3px;
     }
-
-          @include for-size(phone-only){
-            top: 33px;
-            right:20px;
-          }
-}
-
-.Arrow{
-    // width: 34px;
-    // height: 20px;
-
-    // @include for-size(phone-only){
-        width: 26px;
-        height: 16px;       
-    // }
 }
 
 .title {
@@ -95,47 +83,38 @@
     font-weight: 400;
     font-size: 16px;
     color: #191919;
+    line-height: 1.6;
 
     @include for-size(phone-only) {
         font-size: 14px;
     }
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
 }
 
 .techStack {
     display: flex;
-    flex-direction: row;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 8px;
-
-    span {
-        // &:nth-last-child(-n + 2) {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        // }
-    }
-
-
-}
-
-.techStackTitle {
-    font-size: 16px;
-    color: #222222;
-    font-weight: 500;
-
-    @include for-size(phone-only) {
-        font-size: 14px;
-    }
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: auto 0 0;
+    padding: 16px 0 0;
+    list-style: none;
 }
 
 .techStackName {
-    font-size: 16px;
-    color: #4c4c4c;
-    font-weight: 400;
-
-    @include for-size(phone-only) {
-        font-size: 14px;
-    }
+    max-width: 100%;
+    padding: 4px 8px;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    background: #f3f6fa;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #36434e;
+    font-weight: 500;
+    overflow-wrap: anywhere;
 }

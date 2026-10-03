@@ -57,14 +57,27 @@
 
 
 .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96px;
+
     img {
-        height: 120px;
-        width: 120px;
+        display: block;
+        height: 72px;
+        width: 72px;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: center;
 
         @include for-size(phone-only) {
-            height: 80px;
-            width: 80px;
+            height: 56px;
+            width: 56px;
         }
 
+    }
+
+    @include for-size(phone-only) {
+        height: 72px;
     }
 }

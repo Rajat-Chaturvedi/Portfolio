@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./about.module.scss";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import Lottie from "lottie-web";
+import type { AnimationItem } from "lottie-web";
 import { Call, Reading } from "../svgs";
 import Link from "next/link";
 import { UI_CONTENT } from "../../constants";
@@ -34,17 +34,23 @@ const About: React.FC<AboutProps> = ({ data }) => {
   });
 
   useEffect(() => {
-    if (!container.current) return;
-
-    const animation = Lottie.loadAnimation({
-      container: container.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: require("../../../../public/assets/projects.json"),
+    let disposed = false;
+    let animation: AnimationItem | undefined;
+    import("lottie-web").then(({ default: lottie }) => {
+      if (disposed || !container.current) return;
+      animation = lottie.loadAnimation({
+        container: container.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        animationData: require("../../../../public/assets/projects.json"),
+      });
     });
 
-    return () => animation.destroy();
+    return () => {
+      disposed = true;
+      animation?.destroy();
+    };
   }, []);
 
   const [left, right] = data?.experienceStats

@@ -1,13 +1,11 @@
 import { mapAbout } from "../aboutMapper";
+import { fetchStrapi } from "../strapi";
 
 export async function getAbout() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/about`, {
+  const json = await fetchStrapi("/api/about", {
     cache: "no-store",
-    signal: AbortSignal.timeout(5000),
+    next: { revalidate: 0 },
   });
-
-  if (!res.ok) throw new Error(`About request failed: ${res.status}`);
-  const json = await res.json();
 
   return mapAbout(json);
 }

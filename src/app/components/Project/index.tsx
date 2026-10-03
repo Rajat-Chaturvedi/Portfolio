@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./project.module.scss";
-import { Arrow } from "../svgs";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { UI_CONTENT } from "../../constants";
 
 interface ProjectProps {
@@ -21,7 +20,7 @@ const Project: React.FC<ProjectProps> = ({ item }) => {
     <div className={styles.contentContainer}>
       {/* Image */}
       <div className={styles.imgContainer}>
-        <img src={item?.image} alt={item?.name} />
+        {item.image && <img src={item.image} alt={item.name} />}
       </div>
 
       {/* External link */}
@@ -29,14 +28,11 @@ const Project: React.FC<ProjectProps> = ({ item }) => {
         href={item.link}
         target="_blank"
         rel="noopener noreferrer"
-        className={styles.arrowWrapper}
+        className={styles.externalLink}
+        aria-label={`${item.name}: ${UI_CONTENT.project.openLink}`}
+        title={`${item.name}: ${UI_CONTENT.project.openLink}`}
       >
-        <span>
-          <Arrow
-            styles={{ color: "#4c4c4c", backgroundColor: "#4c4c4c" }}
-            className={styles.Arrow}
-          />
-        </span>
+        <ExternalLink size={20} strokeWidth={1.75} aria-hidden="true" />
       </Link>
 
       {/* Title */}
@@ -46,14 +42,23 @@ const Project: React.FC<ProjectProps> = ({ item }) => {
       <div className={styles.itemContainer}>
         <p className={styles.description}>{item.description}</p>
 
-        <p className={styles.techStack}>
-          <span className={styles.techStackTitle}>{UI_CONTENT.project.stack}</span>
-          {item.techStack.map((tech, index) => (
-            <span key={index} className={styles.techStackName}>
-              #{tech}
+        {item.techStack.length > 0 && (
+          <>
+            <span className={styles.techStackTitle}>
+              {UI_CONTENT.project.stack}
             </span>
-          ))}
-        </p>
+            <ul
+              className={styles.techStack}
+              aria-label={UI_CONTENT.project.stack}
+            >
+              {item.techStack.map((tech, index) => (
+                <li key={`${tech}-${index}`} className={styles.techStackName}>
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </div>
     </div>
   );

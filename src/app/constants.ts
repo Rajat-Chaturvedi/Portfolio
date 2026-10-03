@@ -16,7 +16,7 @@ export const UI_CONTENT = {
   about: {
     typewriterFallback: `Hi, I am ${SITE_CONTENT.name}.`,
     loading: "Loading...",
-    learnMore: "Learn More",
+    learnMore: "View Resume",
     contactMe: "Contact Me",
     contactHref: "#contact",
   },
@@ -86,7 +86,10 @@ export const UI_CONTENT = {
     building: "Building",
     availability: "Availability",
   },
-  project: { stack: "Stack :" },
+  project: {
+    stack: "Technologies",
+    openLink: "Open project in a new tab",
+  },
   writing: { readArticle: "Read article" },
   whatsapp: {
     message: "Hello! I want to connect regarding fulltime opportunity / freelance.",
