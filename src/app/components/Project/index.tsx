@@ -3,6 +3,7 @@ import styles from "./project.module.scss";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { UI_CONTENT } from "../../constants";
+import { projectSlug } from "../../utils/projectSlug";
 
 interface ProjectProps {
   item: {
@@ -19,9 +20,9 @@ const Project: React.FC<ProjectProps> = ({ item }) => {
   return (
     <div className={styles.contentContainer}>
       {/* Image */}
-      <div className={styles.imgContainer}>
+      <Link href={`/projects/${projectSlug(item.name)}`} className={styles.imgContainer} aria-label={`${UI_CONTENT.project.details}: ${item.name}`}>
         {item.image && <img src={item.image} alt={item.name} />}
-      </div>
+      </Link>
 
       {/* External link */}
       <Link
@@ -36,7 +37,7 @@ const Project: React.FC<ProjectProps> = ({ item }) => {
       </Link>
 
       {/* Title */}
-      <p className={styles.title}>{item.name}</p>
+      <h3 className={styles.title}><Link href={`/projects/${projectSlug(item.name)}`}>{item.name}</Link></h3>
 
       {/* Description + stack */}
       <div className={styles.itemContainer}>

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "./caseStudies.module.scss";
 import { UI_CONTENT } from "../../constants";
+import ExpandableList from "../ExpandableList";
 
 interface CaseStudy {
   id: number;
@@ -31,7 +32,7 @@ const CaseStudies = ({ data }: { data: CaseStudy[] }) => {
     <section className={styles.section} id="case-studies">
       <div className={styles.container}>
         <h2>{UI_CONTENT.headings.caseStudies}</h2>
-        <div className={styles.grid}>
+        <ExpandableList as="div" initialCount={UI_CONTENT.lists.caseStudyCount} className={styles.grid}>
           {validItems.map((study) => (
             <article key={study.id} className={styles.card}>
               <div className={styles.header}>
@@ -66,7 +67,7 @@ const CaseStudies = ({ data }: { data: CaseStudy[] }) => {
               </div>
             </article>
           ))}
-        </div>
+        </ExpandableList>
       </div>
     </section>
   );

@@ -11,6 +11,10 @@ export function mapProjects(strapiData: any[]) {
       link: attributes.link ?? "",
       techStack: attributes.techStack ?? [],
       image: imageUrl,
+      role: attributes.role ?? "",
+      problem: attributes.problem ?? "",
+      solution: attributes.solution ?? "",
+      outcome: attributes.outcome ?? "",
     };
   });
 }

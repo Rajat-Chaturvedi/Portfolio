@@ -25,16 +25,16 @@
 
 .Wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
 
-    @include for-size(phone-only) {
-        grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px;
     }
 
-    @include for-size(phone-lg) {
-        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    @media (max-width: 600px) {
+        grid-template-columns: minmax(0, 1fr);
         gap: 20px;
     }
 

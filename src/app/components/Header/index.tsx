@@ -3,6 +3,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./header.module.scss";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CV, Close, Github, HamBurger, LinkedIn } from "../svgs";
 import { UI_CONTENT } from "../../constants";
 
@@ -18,7 +19,11 @@ interface HeaderProps {
 function Header({ links, maintenance = false }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuToggle = useRef<HTMLButtonElement>(null);
-  const nav = maintenance ? UI_CONTENT.header.maintenanceNav : UI_CONTENT.header.nav;
+  const pathname = usePathname();
+  const nav = (maintenance ? UI_CONTENT.header.maintenanceNav : UI_CONTENT.header.nav).map(item => ({
+    ...item,
+    href: pathname !== "/" && item.href.startsWith("#") ? `/${item.href}` : item.href,
+  }));
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -38,7 +43,7 @@ function Header({ links, maintenance = false }: HeaderProps) {
         {/* Left Part */}
         <div className={styles.headerLeftWrapper}>
           <div>
-            <Link href="#" passHref className={styles.logo}>
+            <Link href="/" passHref className={styles.logo}>
               {/* <a className={styles.logo}> */}
               <span>{UI_CONTENT.header.initials}</span>
               {/* </a> */}

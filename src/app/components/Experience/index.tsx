@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./experience.module.scss";
 import { UI_CONTENT } from "../../constants";
+import ExpandableList from "../ExpandableList";
 
 interface ExperienceItem {
   id: number;
@@ -39,31 +40,22 @@ const Experience = ({ data }: { data: ExperienceItem[] }) => {
       <div className={styles.container} id="experience">
         <h2 className={styles.heading}>{UI_CONTENT.headings.experience}</h2>
 
-        <div className={styles.cardWrapper}>
+        <ExpandableList as="ol" initialCount={UI_CONTENT.lists.experienceCount} className={styles.cardWrapper}>
           {validItems.map((item) => (
-            <div key={item.id} className={styles.cardContainer}>
-              <div className={styles.imgContainer}>
-                {item.logo && (
-                  <img
-                    src={item.logo}
-                    alt={item.company}
-                    className={styles.logo}
-                  />
-                )}
-              </div>
-
-              <h4 className={styles.title}>
-                {item.title} {UI_CONTENT.experience.companyJoiner} {item.company}
-              </h4>
-              <h5>{`${item?.startDate} - ${item?.endDate}`}</h5>
+            <li key={item.id} className={styles.cardContainer}>
+              <h3 className={styles.title}>
+                {item.title}
+              </h3>
+              <p className={styles.company}>{item.company}</p>
+              <p className={styles.dates}>{`${item?.startDate} - ${item?.endDate}`}</p>
               <ul className={styles.bullets}>
                 {item?.bullets?.map((bullet) => (
                   <li key={bullet.id}>{bullet.point}</li>
                 ))}
               </ul>
-            </div>
+            </li>
           ))}
-        </div>
+        </ExpandableList>
       </div>
     </>
   );

@@ -24,6 +24,7 @@ import { getTestimonials } from "./utils/api/testimonials";
 import { getWritings } from "./utils/api/writings";
 import { getCaseStudies } from "./utils/api/caseStudies";
 import Maintenance from "./components/Maintenance";
+import Certifications from "./components/Certifications";
 
 export const dynamic = "force-dynamic";
 
@@ -78,6 +79,7 @@ export default async function Home() {
       <NowSection data={nowData} />
       <Writing data={writing} />
       <Awards data={awards} />
+      <Certifications />
       <CTA data={ctaData} />
       <Contact />
     </main>

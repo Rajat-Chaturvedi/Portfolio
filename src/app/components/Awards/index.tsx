@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./awards.module.scss";
 import { UI_CONTENT } from "../../constants";
+import credentials from "../../data/credentials.json";
+import ExpandableList from "../ExpandableList";
 
 interface Award {
   id: number;
@@ -12,7 +14,7 @@ interface AwardsProps {
 }
 
 const Awards = ({ data }: AwardsProps) => {
-  const validItems = (data || []).filter((item) => item?.title?.trim());
+  const validItems = (data || []).filter((item) => item?.title?.trim() && !credentials.some(credential => credential.sourceTitle === item.title));
 
   if (!validItems.length) return null;
 
@@ -21,11 +23,11 @@ const Awards = ({ data }: AwardsProps) => {
       <div className={styles.subContainer}>
         <h2>{UI_CONTENT.headings.awards}</h2>
 
-        <ul className={styles.listContainer}>
+        <ExpandableList initialCount={UI_CONTENT.lists.awardCount} className={styles.listContainer}>
           {validItems.map((item) => (
             <li key={item.id}>{item.title}</li>
           ))}
-        </ul>
+        </ExpandableList>
       </div>
     </div>
   );

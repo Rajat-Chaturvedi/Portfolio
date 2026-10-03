@@ -1,65 +1,63 @@
-@import "../../styles/globalVariables";
-
 .section {
-  background: #ffffff;
-  padding: 24px 12px;
+  background: #fff;
+  padding: 48px 24px;
+  color: #1d252d;
+  scroll-margin-top: 120px;
 }
 
 .container {
-  h2 {
-    text-align: center;
-    font-size: 36px;
-    color: #1d252d;
-    margin: 0 0 16px;
-
-    @include for-size(phone-only) {
-      font-size: 24px;
-    }
-  }
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
-.grid {
+.standalone { padding-top: 16px; }
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  h1, h2 { margin: 0; font-size: 28px; line-height: 1.3; }
+  a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #035739; text-decoration: none; }
+}
+
+.list { margin: 0; padding: 0; list-style: none; }
+.list > li { border-top: 1px solid #e1e4e8; }
+.publisher { color: #566470; font-size: 13px; }
+.empty { color: #485661; }
+
+.row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-
-  @include for-size(tablet-phone) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @include for-size(phone-only) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card {
-  border-radius: 12px;
-  border: 1px solid #d2d2d2;
-  background: #ffffff;
-  padding: 16px;
+  grid-template-columns: minmax(0, 1fr) 20px;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  color: inherit;
+  text-decoration: none;
 
   h3 {
-    margin: 0 0 10px;
-    color: #1d252d;
+    margin: 8px 0 10px;
     font-size: 18px;
-    line-height: 1.35;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
   }
-
   p {
-    margin: 0 0 14px;
-    color: #4c4c4c;
-    line-height: 1.6;
+    margin: 0;
+    max-width: 75ch;
+    color: #485661;
+    line-height: 1.7;
     font-size: 14px;
   }
+  > svg { color: #035739; }
+  &:hover h3 { color: #035739; text-decoration: underline; text-underline-offset: 4px; }
+  &:focus-visible { outline: 2px solid #048558; outline-offset: 4px; }
+}
 
-  a {
-    color: #6f10a2;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-
-    &:hover {
-      color: #510c76;
-    }
-  }
+@media (max-width: 700px) {
+  .section { padding: 24px 20px; }
+  .standalone { padding-top: 8px; }
+  .heading { align-items: flex-start; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+  .heading h1, .heading h2 { font-size: 24px; }
+  .row { gap: 12px; padding: 16px 0; }
 }

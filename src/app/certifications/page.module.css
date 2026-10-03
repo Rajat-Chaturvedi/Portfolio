@@ -1,0 +1,3 @@
+.breadcrumb { max-width: 1088px; padding: 16px 24px 0; margin: 0 auto; }
+.breadcrumb a { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; color: #485661; text-decoration: none; }
+@media (max-width: 700px) { .breadcrumb { padding: 8px 20px 0; } }

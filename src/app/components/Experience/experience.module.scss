@@ -1,8 +1,9 @@
 @import "../../styles/globalVariables";
 
 .container {
+  scroll-margin-top: 120px;
   background: $revamp-color-one;
-  padding: 12px;
+  padding: 40px 24px;
 
   h2 {
     text-align: center;
@@ -19,68 +20,39 @@
 }
 
 .cardWrapper {
-  padding: 12px;
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  scroll-behavior: smooth;
-
-  // Prevent cards from shrinking
-  > * {
-    flex-shrink: 0;
-  }
-
-  // Hide scrollbar (Chrome, Safari)
-  &::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-  }
-
-  // Firefox
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
-
-  @include for-size(phone-only) {
-    padding-bottom: 6px;
-    flex-direction: column;
-  }
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1040px;
+  display: grid;
+  gap: 0;
+  list-style: none;
 }
 
 .cardContainer {
-  min-width: 320px;
-  max-width: 320px;
-  background: $primary-bg;
-  border: 1px solid #d2d2d2;
-  border-radius: 8px;
-  box-shadow: 0 14px 20px 0 rgba(25, 25, 25, 0.1);
-  padding: 10px;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 32px;
+  padding: 28px 0;
+  border-top: 1px solid #d2d2d2;
 
-  h4 {
-    text-align: center;
-    font-size: 18px;
+  h3 {
+    grid-column: 1;
+    text-align: left;
+    font-size: 20px;
     margin: 0;
-    padding-top: 8px;
+    line-height: 1.4;
 
     @include for-size(phone-only) {
       font-size: 16px;
     }
   }
 
-  h5 {
-    text-align: center;
-    font-size: 16px;
+  .dates {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    font-size: 13px;
     margin: 0;
     padding-bottom: 8px;
     color: $lightgrey;
@@ -91,43 +63,75 @@
   }
 
   ul {
+    grid-column: 1 / -1;
+    grid-row: 3;
     margin: 0;
     padding-top: 8px;
   }
 
   @include for-size(phone-only) {
-    min-width: unset;
-    max-width: unset;
-  }
-}
-
-.imgContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 88px;
-  margin-bottom: 8px;
-
-  img {
-    display: block;
-    height: 72px;
-    width: 72px;
-    border: 1px solid #d2d2d2;
-    border-radius: 50%;
-    background: $primary-bg;
-    object-fit: contain;
-    object-position: center;
-
-    @include for-size(phone-only) {
-      height: 60px;
-      width: 60px;
+    grid-template-columns: minmax(0, 1fr);
+    .dates {
+      grid-column: 1;
+      grid-row: 3;
+      padding-top: 8px;
+      text-align: left;
+    }
+    .company {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    ul {
+      grid-column: 1 / -1;
+      grid-row: 4;
+      margin-top: 12px;
     }
   }
 }
 
+.company {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 8px 0;
+  color: #035739;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+// .imgContainer {
+//   grid-column: 1;
+//   grid-row: 2;
+//   display: flex;
+//   align-items: center;
+//   height: 88px;
+//   margin-bottom: 8px;
+//   justify-content: flex-start;
+
+//   img {
+//     display: block;
+//     height: 72px;
+//     width: 72px;
+//     border: 1px solid #d2d2d2;
+//     border-radius: 50%;
+//     background: $primary-bg;
+//     object-fit: contain;
+//     object-position: center;
+
+//     @include for-size(phone-only) {
+//       height: 60px;
+//       width: 60px;
+//     }
+//   }
+// }
+
 .bullets {
   color: $greyColor;
   padding-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.7;
+  li + li {
+    margin-top: 8px;
+  }
 
   @include for-size(phone-only) {
     font-size: 14px;

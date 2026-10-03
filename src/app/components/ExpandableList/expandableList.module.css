@@ -1,0 +1,4 @@
+.controls { display: flex; justify-content: center; margin-top: 24px; }
+.controls button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 18px; border: 1px solid #bfcfc6; border-radius: 6px; background: #fff; color: #035739; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; }
+.controls button:hover { background: #edf5f0; }
+.controls button:focus-visible { outline: 2px solid #048558; outline-offset: 3px; }

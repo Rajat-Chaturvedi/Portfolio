@@ -7,6 +7,18 @@ export const SITE_CONTENT = {
 };
 
 export const UI_CONTENT = {
+  lists: {
+    showMore: "Show more",
+    showLess: "Show less",
+    experienceCount: 3,
+    credentialCount: 5,
+    writingCount: 3,
+    caseStudyCount: 3,
+    testimonialCount: 3,
+    awardCount: 5,
+    projectCount: 6,
+    projectRows: 2,
+  },
   maintenance: {
     label: `${SITE_CONTENT.name} / Portfolio`,
     title: "Site under maintenance",
@@ -76,6 +88,7 @@ export const UI_CONTENT = {
       { href: "#skills", label: "Skills" },
       { href: "#case-studies", label: "Case Studies" },
       { href: "#projects", label: "Projects" },
+      { href: "#certifications", label: "Credentials" },
       { href: "#testimonials", label: "Testimonials" },
       { href: "#now", label: "Now" },
       { href: "#writing", label: "Writing" },
@@ -92,8 +105,35 @@ export const UI_CONTENT = {
   project: {
     stack: "Technologies",
     openLink: "Open project in a new tab",
+    details: "View project",
+    back: "All projects",
+    overview: "Overview",
+    visit: "Visit live site",
+    role: "My role",
+    problem: "Challenge",
+    solution: "Approach",
+    outcome: "Outcome",
+    next: "Next project",
   },
-  writing: { readArticle: "Read article" },
+  credentials: {
+    title: "Certifications & Education",
+    viewAll: "View credentials",
+    back: "Back to portfolio",
+    education: "Education",
+    workshop: "Certified workshop",
+    certification: "Course certificate",
+    openExternal: "Open certificate in a new tab",
+    viewImage: "View certificate image",
+    all: "All credentials",
+    imageAlt: "Certificate for",
+  },
+  writing: {
+    readArticle: "Read article",
+    viewAll: "All articles",
+    back: "Back to portfolio",
+    external: "Opens in a new tab",
+    empty: "No published articles yet.",
+  },
   whatsapp: {
     message: "Hello! I want to connect regarding fulltime opportunity / freelance.",
     label: "Chat on WhatsApp",

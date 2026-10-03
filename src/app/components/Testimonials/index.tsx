@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./testimonials.module.scss";
 import { UI_CONTENT } from "../../constants";
+import ExpandableList from "../ExpandableList";
 
 interface Testimonial {
   id: number;
@@ -21,7 +22,7 @@ const Testimonials = ({ data }: { data: Testimonial[] }) => {
     <section className={styles.section} id="testimonials">
       <div className={styles.container}>
         <h2>{UI_CONTENT.headings.testimonials}</h2>
-        <div className={styles.grid}>
+        <ExpandableList as="div" initialCount={UI_CONTENT.lists.testimonialCount} className={styles.grid}>
           {validItems.map((item) => (
             <article key={item.id} className={styles.card}>
               <p className={styles.quote}>&quot;{item.quote}&quot;</p>
@@ -32,7 +33,7 @@ const Testimonials = ({ data }: { data: Testimonial[] }) => {
               </p>
             </article>
           ))}
-        </div>
+        </ExpandableList>
       </div>
     </section>
   );

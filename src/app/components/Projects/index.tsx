@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./projects.module.scss";
 import Project from "../Project";
 import { UI_CONTENT } from "../../constants";
+import ExpandableList from "../ExpandableList";
 
 type ProjectType = {
   id: number;
@@ -29,11 +30,11 @@ const Projects = ({ projects }: ProjectsProps) => {
       <div className={styles.contentContainer}>
         <h2>{UI_CONTENT.headings.projects}</h2>
 
-        <div className={styles.Wrapper}>
+        <ExpandableList as="div" initialCount={UI_CONTENT.lists.projectCount} rows={UI_CONTENT.lists.projectRows} className={styles.Wrapper}>
           {validProjects.map((item) => (
             <Project key={item.id} item={item} />
           ))}
-        </div>
+        </ExpandableList>
       </div>
     </section>
   );
