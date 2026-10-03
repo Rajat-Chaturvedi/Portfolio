@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./header.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -29,6 +29,37 @@ function Header({ links, maintenance = false }: HeaderProps) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const mobile = window.matchMedia("(max-width: 767.98px)");
+    if (!mobile.matches) {
+      setIsMenuOpen(false);
+      return;
+    }
+    const elements = [document.documentElement, document.body];
+    const previous = elements.map(element => ({
+      overflow: element.style.overflow,
+      overscrollBehavior: element.style.overscrollBehavior,
+    }));
+    for (const element of elements) {
+      element.style.overflow = "hidden";
+      element.style.overscrollBehavior = "none";
+    }
+    const handleViewportChange = () => {
+      if (!mobile.matches) setIsMenuOpen(false);
+    };
+    mobile.addEventListener("change", handleViewportChange);
+    window.addEventListener("resize", handleViewportChange);
+    return () => {
+      elements.forEach((element, index) => {
+        element.style.overflow = previous[index].overflow;
+        element.style.overscrollBehavior = previous[index].overscrollBehavior;
+      });
+      mobile.removeEventListener("change", handleViewportChange);
+      window.removeEventListener("resize", handleViewportChange);
+    };
+  }, [isMenuOpen]);
+
   return (
     <header
       className={`${styles.headerContainer} ${maintenance ? styles.maintenanceHeader : ""}`}
@@ -39,6 +70,18 @@ function Header({ links, maintenance = false }: HeaderProps) {
         }
       }}
     >
+      {isMenuOpen && (
+        <button
+          type="button"
+          className={styles.menuBackdrop}
+          aria-label={UI_CONTENT.header.closeMenu}
+          tabIndex={-1}
+          onClick={() => {
+            setIsMenuOpen(false);
+            menuToggle.current?.focus();
+          }}
+        />
+      )}
       <div className={styles.headerSubContainer}>
         {/* Left Part */}
         <div className={styles.headerLeftWrapper}>
