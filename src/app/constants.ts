@@ -61,6 +61,9 @@ export const UI_CONTENT = {
     linkedin: "LinkedIn",
     github: "GitHub",
     resume: "Resume",
+    openMenu: "Open navigation menu",
+    closeMenu: "Close navigation menu",
+    navigation: "Mobile navigation",
     fallbackLinks: {
       github: "https://github.com/Rajat-Chaturvedi",
       linkedin: "https://www.linkedin.com/in/rajat-chaturvedi-dev",

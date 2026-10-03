@@ -33,6 +33,13 @@ const records = (name) => read(name)
   .sort((first, second) => (first.order ?? 0) - (second.order ?? 0))
   .map((item, index) => ({ ...item, id: index + 1 }));
 const snapshot = {
+  "/api/case-studies": { data: read("data reference/caseStudies.json").map((item) => ({
+    ...item, stack: item.stack.join(", "),
+  })) },
+  "/api/testimonials": { data: read("data reference/testimonials.json").map((item) => ({
+    id: item.id, author: item.name, role: item.role, company: item.company, content: item.quote,
+  })) },
+  "/api/nows": { data: [{ ...read("data reference/now.json"), id: 1 }] },
   "/api/about": { data: { ...read("about.json"), id: 1 } },
   "/api/awards": { data: records("awards.json") },
   "/api/experiences": { data: records("experiences.json").map((item) => ({
@@ -48,13 +55,18 @@ const snapshot = {
     })),
   })) },
 };
-for (const endpoint of ["case-studies", "ctas", "impact-metrics", "nows", "processes", "testimonials", "writings"]) {
+for (const endpoint of ["ctas", "impact-metrics", "processes", "writings"]) {
   snapshot[`/api/${endpoint}`] = { data: [] };
 }
 const destination = new URL("../src/app/data/cms-snapshot.json", import.meta.url);
-const output = process.argv.includes("--media-only")
+const output = process.argv.includes("--media-only") || process.argv.includes("--sections-only")
   ? JSON.parse(readFileSync(destination, "utf8"))
   : snapshot;
+if (process.argv.includes("--sections-only")) {
+  for (const endpoint of ["/api/case-studies", "/api/testimonials", "/api/nows"]) {
+    output[endpoint] = snapshot[endpoint];
+  }
+}
 if (process.argv.includes("--media-only")) {
   for (const project of output["/api/projects"].data) {
     project.image = media(projectAssets[project.name]) ?? project.image;

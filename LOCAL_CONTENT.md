@@ -26,14 +26,24 @@ snapshot's records and text, run:
 node scripts/sync-local-content.mjs --media-only
 ```
 
+To refresh only case studies, testimonials and Now from the CMS repository's
+`data reference` JSON files while preserving other snapshot edits:
+
+```sh
+node scripts/sync-local-content.mjs --sections-only
+```
+
 Commit the updated snapshot and redeploy the frontend. Editing CMS JSON alone
 does not update an already deployed frontend.
 
-The snapshot includes About, awards, experiences, projects and skills.
+The snapshot includes About, awards, experiences, projects, skills, case studies,
+testimonials and Now.
 Media URLs are matched from the Cloudinary inventory. Images without a match
 are omitted. Cloudinary remains an external dependency.
 
-The sample case studies, testimonials, metrics and other reference sections
-are intentionally excluded, rather than presented as verified portfolio data.
+Case studies and testimonials use the supplied reference content, including
+sample names, claims and example.com links. Verify or replace these before
+publishing them as genuine portfolio work or endorsements. Metrics, process,
+CTA and writing reference sections remain excluded.
 This snapshot is not a complete live database backup and may not include
 changes made only in the hosted CMS.
