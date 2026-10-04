@@ -39,6 +39,7 @@ export const UI_CONTENT = {
     awardCount: 5,
     projectCount: 6,
     projectRows: 2,
+    impactMetricCount: 3,
   },
   maintenance: {
     label: `${SITE_CONTENT.name} / Portfolio`,
@@ -158,6 +159,28 @@ export const UI_CONTENT = {
     back: "Back to portfolio",
     external: "Opens in a new tab",
     empty: "No published articles yet.",
+  },
+  impact: {
+    sectionEyebrow: "Measured outcomes",
+    sectionTitle: "Impact in shipped work",
+    sectionDescription:
+      "Delivery, commerce, and performance results from production work.",
+    viewDetails: "Explore the details",
+    back: "Back to portfolio",
+    pageEyebrow: "Selected outcomes",
+    pageTitle: "Impact, with context",
+    pageDescription:
+      "A closer look at the project, contribution, and measurement behind each headline result.",
+    measuredBy: "Measured by",
+    viewProject: "View project",
+    viewExperience: "View experience",
+    sourceNote:
+      "Results span commerce delivery, checkout reliability, and web performance.",
+    showVisualization: "Show visual breakdown",
+    hideVisualization: "Hide visual breakdown",
+    relativeIndexTitle: "Relative change (baseline indexed to 100)",
+    beforeAfter: "to",
+    providerListTitle: "Integrated checkout providers",
   },
   whatsapp: {
     message:

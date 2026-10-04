@@ -1,30 +1,48 @@
-import React from "react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { UI_CONTENT } from "../../constants";
+import type { ImpactMetric } from "../../types/impactMetric";
+import ExpandableList from "../ExpandableList";
 import styles from "./impactMetrics.module.scss";
 
-interface Metric {
-  id: number;
-  value: string;
-  label: string;
-  note: string;
-}
-
-const ImpactMetrics = ({ data }: { data: Metric[] }) => {
-  const validItems = (data || []).filter(
-    (metric) => metric?.value?.trim() && metric?.label?.trim(),
-  );
-
-  if (!validItems.length) return null;
+const ImpactMetrics = ({ data }: { data: ImpactMetric[] }) => {
+  const featured = data.filter((story) => story.featured);
 
   return (
     <section className={styles.section} id="impact-metrics">
       <div className={styles.container}>
-        {validItems.map((metric) => (
-          <article key={metric.id} className={styles.card}>
-            <p className={styles.value}>{metric.value}</p>
-            <h3>{metric.label}</h3>
-            <p className={styles.note}>{metric.note}</p>
-          </article>
-        ))}
+        <div className={styles.heading}>
+          <div>
+            <p className={styles.eyebrow}>{UI_CONTENT.impact.sectionEyebrow}</p>
+            <h2>{UI_CONTENT.impact.sectionTitle}</h2>
+            <p className={styles.intro}>{UI_CONTENT.impact.sectionDescription}</p>
+          </div>
+          <Link className={styles.detailLink} href="/impact">
+            {UI_CONTENT.impact.viewDetails} <ArrowUpRight size={18} aria-hidden="true" />
+          </Link>
+        </div>
+        <ExpandableList
+          as="div"
+          initialCount={UI_CONTENT.lists.impactMetricCount}
+          className={styles.grid}
+        >
+          {featured.map((story) => (
+            <Link
+              key={story.slug}
+              href={`/impact#${story.slug}`}
+              className={styles.card}
+            >
+              <span className={styles.value}>{story.value}</span>
+              <span className={styles.label}>{story.label}</span>
+              <span className={styles.note}>{story.context}</span>
+              <ArrowUpRight
+                className={styles.cardArrow}
+                size={18}
+                aria-hidden="true"
+              />
+            </Link>
+          ))}
+        </ExpandableList>
       </div>
     </section>
   );
