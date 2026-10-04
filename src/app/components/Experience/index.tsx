@@ -40,14 +40,22 @@ const Experience = ({ data }: { data: ExperienceItem[] }) => {
       <div className={styles.container} id="experience">
         <h2 className={styles.heading}>{UI_CONTENT.headings.experience}</h2>
 
-        <ExpandableList as="ol" initialCount={UI_CONTENT.lists.experienceCount} className={styles.cardWrapper}>
+        <ExpandableList
+          as="ol"
+          initialCount={UI_CONTENT.lists.experienceCount}
+          className={styles.cardWrapper}
+        >
           {validItems.map((item) => (
-            <li key={item.id} className={styles.cardContainer}>
-              <h3 className={styles.title}>
-                {item.title}
-              </h3>
+            <li
+              key={item.id}
+              id={`experience-${item.id}`}
+              className={styles.cardContainer}
+            >
+              <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.company}>{item.company}</p>
-              <p className={styles.dates}>{`${item?.startDate} - ${item?.endDate}`}</p>
+              <p
+                className={styles.dates}
+              >{`${item?.startDate} - ${item?.endDate}`}</p>
               <ul className={styles.bullets}>
                 {item?.bullets?.map((bullet) => (
                   <li key={bullet.id}>{bullet.point}</li>

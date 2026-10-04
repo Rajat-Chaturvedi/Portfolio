@@ -7,6 +7,27 @@ export const SITE_CONTENT = {
 };
 
 export const UI_CONTENT = {
+  search: {
+    open: "Search portfolio",
+    close: "Close search",
+    placeholder: "Search skills, projects, experience...",
+    results: "Results",
+    suggestions: "No close matches. Related suggestions",
+    browse: "Explore the portfolio",
+    categories: {
+      section: "Section",
+      about: "About",
+      experience: "Experience",
+      project: "Project",
+      skills: "Skills",
+      credential: "Credential",
+      article: "Article",
+      testimonial: "Testimonial",
+      caseStudy: "Case study",
+      award: "Award",
+      now: "Now",
+    },
+  },
   lists: {
     showMore: "Show more",
     showLess: "Show less",
@@ -22,7 +43,8 @@ export const UI_CONTENT = {
   maintenance: {
     label: `${SITE_CONTENT.name} / Portfolio`,
     title: "Site under maintenance",
-    message: "My portfolio is temporarily unavailable. Please check back soon, or get in touch directly.",
+    message:
+      "My portfolio is temporarily unavailable. Please check back soon, or get in touch directly.",
     contactLabel: "Get in touch",
   },
   about: {
@@ -79,20 +101,23 @@ export const UI_CONTENT = {
     fallbackLinks: {
       github: "https://github.com/Rajat-Chaturvedi",
       linkedin: "https://www.linkedin.com/in/rajat-chaturvedi-dev",
-      resume: "https://drive.google.com/file/d/1e6DBbFVqU1U2_ZAqaSxWmLPoHe4Y9sXQ/view?usp=sharing",
+      resume:
+        "https://drive.google.com/file/d/1e6DBbFVqU1U2_ZAqaSxWmLPoHe4Y9sXQ/view?usp=sharing",
     },
-    maintenanceNav: [{ href: `mailto:${SITE_CONTENT.email}`, label: "Contact" }],
+    maintenanceNav: [
+      { href: `mailto:${SITE_CONTENT.email}`, label: "Contact" },
+    ],
     nav: [
       { href: "#about", label: "About" },
-      { href: "#experience", label: "Works" },
-      { href: "#skills", label: "Skills" },
-      { href: "#case-studies", label: "Case Studies" },
+      { href: "#experience", label: "Experience" },
       { href: "#projects", label: "Projects" },
-      { href: "#certifications", label: "Credentials" },
+      { href: "#case-studies", label: "Case Studies" },
+      { href: "#skills", label: "Skills" },
       { href: "#testimonials", label: "Testimonials" },
-      { href: "#now", label: "Now" },
       { href: "#writing", label: "Writing" },
+      { href: "#certifications", label: "Credentials" },
       { href: "#awards", label: "Awards" },
+      { href: "#now", label: "Now" },
       { href: "#contact", label: "Contact" },
     ],
   },
@@ -135,7 +160,8 @@ export const UI_CONTENT = {
     empty: "No published articles yet.",
   },
   whatsapp: {
-    message: "Hello! I want to connect regarding fulltime opportunity / freelance.",
+    message:
+      "Hello! I want to connect regarding fulltime opportunity / freelance.",
     label: "Chat on WhatsApp",
   },
 };

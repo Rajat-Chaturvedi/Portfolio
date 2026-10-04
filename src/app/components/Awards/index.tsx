@@ -25,7 +25,7 @@ const Awards = ({ data }: AwardsProps) => {
 
         <ExpandableList initialCount={UI_CONTENT.lists.awardCount} className={styles.listContainer}>
           {validItems.map((item) => (
-            <li key={item.id}>{item.title}</li>
+            <li key={item.id} id={`award-${item.id}`}>{item.title}</li>
           ))}
         </ExpandableList>
       </div>

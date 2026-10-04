@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import styles from "./caseStudies.module.scss";
 import { UI_CONTENT } from "../../constants";
 import ExpandableList from "../ExpandableList";
@@ -34,7 +34,7 @@ const CaseStudies = ({ data }: { data: CaseStudy[] }) => {
         <h2>{UI_CONTENT.headings.caseStudies}</h2>
         <ExpandableList as="div" initialCount={UI_CONTENT.lists.caseStudyCount} className={styles.grid}>
           {validItems.map((study) => (
-            <article key={study.id} className={styles.card}>
+            <article key={study.id} id={`case-study-${study.id}`} className={styles.card}>
               <div className={styles.header}>
                 <h3>{study.title}</h3>
                 <p>
@@ -57,14 +57,14 @@ const CaseStudies = ({ data }: { data: CaseStudy[] }) => {
                   <span key={item}>{item}</span>
                 ))}
               </div>
-              <div className={styles.links}>
+              {/* <div className={styles.links}>
                 <Link href={study.liveUrl} target="_blank">
                   {UI_CONTENT.caseStudies.live}
                 </Link>
                 <Link href={study.repoUrl} target="_blank">
                   {UI_CONTENT.caseStudies.source}
                 </Link>
-              </div>
+              </div> */}
             </article>
           ))}
         </ExpandableList>

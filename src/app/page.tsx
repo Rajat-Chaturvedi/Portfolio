@@ -70,16 +70,16 @@ export default async function Home() {
     <main className="">
       <About data={about} />
       <ImpactMetrics data={impactMetrics} />
-      <Process data={processData} />
       <Experience data={experiences} />
-      <Skills data={skills} />
-      <CaseStudies data={caseStudies} />
       <Projects projects={projects} />
+      <CaseStudies data={caseStudies} />
+      <Skills data={skills} />
       <Testimonials data={testimonials} />
-      <NowSection data={nowData} />
       <Writing data={writing} />
-      <Awards data={awards} />
       <Certifications />
+      <Awards data={awards} />
+      <Process data={processData} />
+      <NowSection data={nowData} />
       <CTA data={ctaData} />
       <Contact />
     </main>

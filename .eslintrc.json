@@ -1,3 +1,12 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "overrides": [
+    {
+      "files": ["scripts/**/*.cjs"],
+      "parser": "espree",
+      "env": { "node": true },
+      "parserOptions": { "ecmaVersion": "latest", "sourceType": "script" },
+      "rules": { "@next/next/no-html-link-for-pages": "off" }
+    }
+  ]
 }

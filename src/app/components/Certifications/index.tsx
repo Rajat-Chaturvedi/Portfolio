@@ -28,7 +28,7 @@ export default function Certifications({ standalone = false }: { standalone?: bo
               </div>
               {destination && <span className={styles.actionIcon}>{destination.external ? <ExternalLink size={18} aria-hidden="true" /> : <ArrowRight size={18} aria-hidden="true" />}</span>}
             </>;
-            return <li key={item.id}>
+            return <li key={item.id} id={`credential-${item.id}`}>
               {destination ? <Link
                 href={destination.href}
                 className={`${styles.row} ${styles.linkedRow}`}

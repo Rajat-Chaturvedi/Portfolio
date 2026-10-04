@@ -1,0 +1,113 @@
+.trigger,
+.bar button {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  background: #fff;
+  color: #36434e;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.dialog {
+  padding: 0;
+  border: 1px solid #dce2e6;
+  border-radius: 8px;
+  width: min(640px, calc(100vw - 32px));
+  max-height: min(680px, calc(100svh - 48px));
+  margin: 8svh auto auto;
+  color: #1d252d;
+  background: #fff;
+  box-shadow: 0 16px 60px #0002;
+  overflow-y: auto;
+}
+.dialog::backdrop {
+  background: #1d252d66;
+  backdrop-filter: blur(4px);
+}
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e1e4e8;
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+.bar input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px 0;
+  border: 0;
+  background: #fff;
+  color: #1d252d;
+  font: inherit;
+  font-size: 16px;
+  outline: none;
+}
+.status {
+  margin: 16px;
+  color: #566470;
+  font-size: 13px;
+}
+.results {
+  list-style: none;
+  padding: 0 8px 8px;
+  margin: 0;
+}
+.results a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 4px;
+  color: inherit;
+  text-decoration: none;
+}
+.results a:hover,
+.results a:focus-visible {
+  background: #edf5f0;
+  outline: 2px solid #048558;
+  outline-offset: -2px;
+}
+.results a > span {
+  min-width: 0;
+}
+.results small {
+  display: block;
+  color: #035739;
+  margin-bottom: 6px;
+}
+.results strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 13px;
+  color: #566470;
+  line-height: 1.6;
+  margin-top: 4px;
+}
+.results svg {
+  flex-shrink: 0;
+}
+@media (max-width: 700px) {
+  .dialog {
+    margin-top: 16px;
+  }
+  .bar {
+    gap: 8px;
+    padding: 8px 12px;
+  }
+}

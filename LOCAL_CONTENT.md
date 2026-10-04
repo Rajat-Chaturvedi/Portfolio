@@ -1,5 +1,20 @@
 # Offline Portfolio Content
 
+## Portfolio Search
+
+The header search runs locally with Fuse.js. It indexes the committed content
+snapshot, credentials and section labels, including resume-derived experience
+bullets and skills. It does not parse the remote resume PDF or call an AI API.
+Update the snapshot when the resume or hosted CMS changes so search stays current.
+Project results open detail pages; experience targets reveal collapsed roles.
+Unmatched queries show labeled fuzzy suggestions or suggested sections.
+
+Run the search checks from the frontend directory:
+
+```sh
+node scripts/test-portfolio-search.cjs
+```
+
 ## Keeping Both Repositories in Sync
 
 After editing frontend snapshot or credential data, run from the frontend:

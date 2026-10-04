@@ -24,7 +24,7 @@ const Testimonials = ({ data }: { data: Testimonial[] }) => {
         <h2>{UI_CONTENT.headings.testimonials}</h2>
         <ExpandableList as="div" initialCount={UI_CONTENT.lists.testimonialCount} className={styles.grid}>
           {validItems.map((item) => (
-            <article key={item.id} className={styles.card}>
+            <article key={item.id} id={`testimonial-${item.id}`} className={styles.card}>
               <p className={styles.quote}>&quot;{item.quote}&quot;</p>
               <p className={styles.author}>{item.name}</p>
               <p className={styles.meta}>
