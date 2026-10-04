@@ -42,7 +42,7 @@ function Header({ links, maintenance = false }: HeaderProps) {
       setIsMenuOpen(false);
       return;
     }
-    const elements = [document.documentElement, document.body];
+    const elements = [document.documentElement];
     const previous = elements.map((element) => ({
       overflow: element.style.overflow,
       overscrollBehavior: element.style.overscrollBehavior,
