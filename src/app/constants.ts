@@ -11,7 +11,7 @@ export const UI_CONTENT = {
     showMore: "Show more",
     showLess: "Show less",
     experienceCount: 3,
-    credentialCount: 5,
+    credentialCount: 3,
     writingCount: 3,
     caseStudyCount: 3,
     testimonialCount: 3,
