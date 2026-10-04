@@ -105,7 +105,9 @@ function Header({ links, maintenance = false }: HeaderProps) {
             </span>
           </div>
           <div className={styles.headerTools}>
-            <PortfolioSearch onOpen={() => setIsMenuOpen(false)} />
+            <div className={styles.mobileSearch}>
+              <PortfolioSearch onOpen={() => setIsMenuOpen(false)} />
+            </div>
             <div className={styles.hamBurgerMenu}>
               <button
                 ref={menuToggle}
@@ -148,6 +150,7 @@ function Header({ links, maintenance = false }: HeaderProps) {
         )}
         {/* Right Part */}
         <div className={styles.headerRightWrapper}>
+          <PortfolioSearch onOpen={() => setIsMenuOpen(false)} />
           <Link target="_blank" href={links.linkedin} passHref>
             <button className={styles.buttonLinkedIn}>
               <span>
